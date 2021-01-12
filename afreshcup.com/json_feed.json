@@ -1,0 +1,226 @@
+{
+  "version": "https://jsonfeed.org/version/1",
+  
+  
+    "title": A Fresh Cup,
+  
+  
+    "description": Out of business.
+,
+  
+  "home_page_url": "https://afreshcup.com/",
+  "feed_url": "https://afreshcup.com/json_feed.json",
+  "icon": "https://afreshcup.com/apple-touch-icon.png",
+  "favicon": "https://afreshcup.com/favicon.ico",
+  "expired": false,
+  
+    "author": {
+      "name": none,
+      
+    },
+  
+  "items": [
+    
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/30/double-shot-2717,
+        "url": "https://afreshcup.com/home/2020/10/30/double-shot-2717.html",
+        "title": Double Shot #2717,
+        
+          
+          "content_html": <h2>End of the Road</h2> <p>Yesterday was the last real Double Shot. I'm retiring, from working in software and from the Internet in general.</p> <p>I've been writing code for over 40 years. I've been doing daily news roundups for decades, first in the Microsoft world and later in open source land. And frankly I'm just tired.</p> <p>Looking back, I'm also not super-happy with how the industry has evolved. There was a time when I could believe and hope that software was making the world a better place. Looking around, I'm not so sure any more. Money and power have seized pretty much everything related to software, and the rising tide of surveillance, manipulation, and generally rapacious behavior appears to be getting worse all the time. It's become harder and harder to find any industry niche that I feel comfortable in working any longer. My sincere blessings to those of you who are still fighting the good fight, but as I said, I'm tired.</p> <p>So, I'm done. This domain will remain online until the registration expires, and then it's gone. If you want anything, grab it now.</p>,
+          "summary": <h2>End of the Road</h2> <p>Yesterday was the last real Double Shot. I'm retiring, from working in software and from the Internet in general.</p> <p>I've been writing code for over 40 years. I've been doing daily news roundups for decades, first in the Microsoft world and later in open source land. And frankly I'm just tired.</p> <p>Looking back, I'm also not super-happy with how the industry has evolved. There was a time when I could believe and hope that software was making the world a better place. Looking around, I'm not so sure any more. Money and power have seized pretty much everything related to software, and the rising tide of surveillance, manipulation, and generally rapacious behavior appears to be getting worse all the time. It's become harder and harder to find any industry niche that I feel comfortable in working any longer. My sincere blessings to those of you who are still fighting the good fight, but as I said, I'm tired.</p> <p>So, I'm done. This domain will remain online until the registration expires, and then it's gone. If you want anything, grab it now.</p>,
+        
+        
+        
+        "date_published": "2020-10-30T00:00:00-05:00",
+        "date_modified": "2020-10-23T06:26:05-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/29/double-shot-2716,
+        "url": "https://afreshcup.com/home/2020/10/29/double-shot-2716.html",
+        "title": Double Shot #2716,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://mokacoding.com/blog/pipe-wrench/">What can a pipe wrench teach us about software engineering?</a></strong> - How to describe things precisely, that's what.</li> <li><strong><a href="https://www.tweag.io/blog/2020-10-22-nickel-open-sourcing/">Nickel: Better configuration for less</a></strong> - Yet another configuration file format.</li> <li><strong><a href="https://visitmy.website/2020/07/13/this-website-is-killing-the-planet/">This website is killing the planet</a></strong> - Some ways to reduce your online carbon footprint.</li> <li><strong><a href="https://blog.1password.com/1password-for-linux-beta-is-now-open/">1Password for Linux beta is now open</a></strong> - If I was planning a new laptop this would be an essential tool for me.</li> <li><strong><a href="https://soundofcolleagues.com">Sound of Colleagues</a></strong> - Simulate office sounds in your browser.</li> <li><strong><a href="https://unixsheikh.com/articles/choose-your-browser-carefully.html">Choose your browser carefully</a></strong> - Well, try to. These days they basically all suck.</li> <li><strong><a href="https://www.vicharpedia.com/stripe-next-google/">Stripe is the next Google</a></strong> - Another sad fact.</li> <li><strong><a href="https://www.tbray.org/ongoing/When/202x/2020/10/20/Google-Antitrust">Google Antitrust Notes</a></strong> - Sensible thoughts from Tim Bray.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://mokacoding.com/blog/pipe-wrench/">What can a pipe wrench teach us about software engineering?</a></strong> - How to describe things precisely, that's what.</li> <li><strong><a href="https://www.tweag.io/blog/2020-10-22-nickel-open-sourcing/">Nickel: Better configuration for less</a></strong> - Yet another configuration file format.</li> <li><strong><a href="https://visitmy.website/2020/07/13/this-website-is-killing-the-planet/">This website is killing the planet</a></strong> - Some ways to reduce your online carbon footprint.</li> <li><strong><a href="https://blog.1password.com/1password-for-linux-beta-is-now-open/">1Password for Linux beta is now open</a></strong> - If I was planning a new laptop this would be an essential tool for me.</li> <li><strong><a href="https://soundofcolleagues.com">Sound of Colleagues</a></strong> - Simulate office sounds in your browser.</li> <li><strong><a href="https://unixsheikh.com/articles/choose-your-browser-carefully.html">Choose your browser carefully</a></strong> - Well, try to. These days they basically all suck.</li> <li><strong><a href="https://www.vicharpedia.com/stripe-next-google/">Stripe is the next Google</a></strong> - Another sad fact.</li> <li><strong><a href="https://www.tbray.org/ongoing/When/202x/2020/10/20/Google-Antitrust">Google Antitrust Notes</a></strong> - Sensible thoughts from Tim Bray.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-29T00:00:00-05:00",
+        "date_modified": "2020-10-24T01:45:37-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/28/double-shot-2715,
+        "url": "https://afreshcup.com/home/2020/10/28/double-shot-2715.html",
+        "title": Double Shot #2715,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://obscurix.github.io/">Obscurix</a></strong> - "Obscurix is an open source, live operating system based on Arch Linux that is heavily configured for privacy, security and anonymity."</li> <li><strong><a href="https://github.com/gao-sun/eul">eul</a></strong> - Open-source MacOS monitoring utility.</li> <li><strong><a href="https://neros.dev/blog/git-crash-course-part-1/">Git Crash Course, Part 1</a></strong> - Practical skills for new git users.</li> <li><strong><a href="https://tinyapps.org/blog/202010210700_whose_computer_is_it.html">Whose computer is it?</a></strong> - Apple's, of course. More Big Company BS.</li> <li><strong><a href="https://github.com/abhaynikam/boring_generators">Boring Generators</a></strong> - Rails generators to install various frequently-users chunks of stuff.</li> <li><strong><a href="https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/">Celebrating 15 years of Git: An interview with Git maintainer Junio Hamano</a></strong> - Hard to believe that git hasn't been around forever.</li> <li><strong><a href="https://coderefinery.wordpress.com/2020/10/21/forcing-functions-in-software-development/">Forcing Functions in Software Development</a></strong> - Ways to make issues show up sooner.</li> <li><strong><a href="https://guillaumebriday.fr/introducing-stimulus-components/">Introducing Stimulus components</a></strong> - An attempt to beef up the Stimulus ecosystem.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://obscurix.github.io/">Obscurix</a></strong> - "Obscurix is an open source, live operating system based on Arch Linux that is heavily configured for privacy, security and anonymity."</li> <li><strong><a href="https://github.com/gao-sun/eul">eul</a></strong> - Open-source MacOS monitoring utility.</li> <li><strong><a href="https://neros.dev/blog/git-crash-course-part-1/">Git Crash Course, Part 1</a></strong> - Practical skills for new git users.</li> <li><strong><a href="https://tinyapps.org/blog/202010210700_whose_computer_is_it.html">Whose computer is it?</a></strong> - Apple's, of course. More Big Company BS.</li> <li><strong><a href="https://github.com/abhaynikam/boring_generators">Boring Generators</a></strong> - Rails generators to install various frequently-users chunks of stuff.</li> <li><strong><a href="https://github.blog/2020-04-07-celebrating-15-years-of-git-an-interview-with-git-maintainer-junio-hamano/">Celebrating 15 years of Git: An interview with Git maintainer Junio Hamano</a></strong> - Hard to believe that git hasn't been around forever.</li> <li><strong><a href="https://coderefinery.wordpress.com/2020/10/21/forcing-functions-in-software-development/">Forcing Functions in Software Development</a></strong> - Ways to make issues show up sooner.</li> <li><strong><a href="https://guillaumebriday.fr/introducing-stimulus-components/">Introducing Stimulus components</a></strong> - An attempt to beef up the Stimulus ecosystem.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-28T00:00:00-05:00",
+        "date_modified": "2020-10-24T01:44:50-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/27/double-shot-2714,
+        "url": "https://afreshcup.com/home/2020/10/27/double-shot-2714.html",
+        "title": Double Shot #2714,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://temporal.io/">Temporal</a></strong> - "Temporal is the open source microservices orchestration platform for running mission critical code at any scale."</li> <li><strong><a href="https://github.com/tholian-network/stealth">Stealth</a></strong> - "Secure, Peer-to-Peer, Private and Automatable Web Browser/Scraper/Proxy"</li> <li><strong><a href="https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/">Emerging Architectures for Modern Data Infrastructure</a></strong> - I've long ago lost track of the big data ecosystem.</li> <li><strong><a href="https://lapcatsoftware.com/articles/chrome-google.html">Chrome exempts Google sites from user site data settings</a></strong> - More BS from big companies.</li> <li><strong><a href="https://blog.crisp.se/2020/10/15/christopheachouiantz/the-lead-squad-protocol">The Lead Squad Protocol</a></strong> - One way to coordinate work across multiple agile teams.</li> <li><strong><a href="https://wiki.alopex.li/BetterThanJson">BetterThanJson</a></strong> - A collection of various data serialization formats.</li> <li><strong><a href="http://blog.alinelerner.com/ive-been-an-engineer-and-a-recruiter-hiring-is-broken-heres-why-and-heres-what-it-should-be-like-instead/">I’ve been an engineer and a recruiter. Hiring is broken. Here’s why… and what it should be like instead.</a></strong> - Good luck.</li> <li><strong><a href="https://metaredux.com/posts/2020/10/21/rubocop-1-0.html">RuboCop 1.0</a></strong> - It's out.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://temporal.io/">Temporal</a></strong> - "Temporal is the open source microservices orchestration platform for running mission critical code at any scale."</li> <li><strong><a href="https://github.com/tholian-network/stealth">Stealth</a></strong> - "Secure, Peer-to-Peer, Private and Automatable Web Browser/Scraper/Proxy"</li> <li><strong><a href="https://a16z.com/2020/10/15/the-emerging-architectures-for-modern-data-infrastructure/">Emerging Architectures for Modern Data Infrastructure</a></strong> - I've long ago lost track of the big data ecosystem.</li> <li><strong><a href="https://lapcatsoftware.com/articles/chrome-google.html">Chrome exempts Google sites from user site data settings</a></strong> - More BS from big companies.</li> <li><strong><a href="https://blog.crisp.se/2020/10/15/christopheachouiantz/the-lead-squad-protocol">The Lead Squad Protocol</a></strong> - One way to coordinate work across multiple agile teams.</li> <li><strong><a href="https://wiki.alopex.li/BetterThanJson">BetterThanJson</a></strong> - A collection of various data serialization formats.</li> <li><strong><a href="http://blog.alinelerner.com/ive-been-an-engineer-and-a-recruiter-hiring-is-broken-heres-why-and-heres-what-it-should-be-like-instead/">I’ve been an engineer and a recruiter. Hiring is broken. Here’s why… and what it should be like instead.</a></strong> - Good luck.</li> <li><strong><a href="https://metaredux.com/posts/2020/10/21/rubocop-1-0.html">RuboCop 1.0</a></strong> - It's out.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-27T00:00:00-05:00",
+        "date_modified": "2020-10-24T01:43:39-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/26/double-shot-2713,
+        "url": "https://afreshcup.com/home/2020/10/26/double-shot-2713.html",
+        "title": Double Shot #2713,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://github.com/charmbracelet/glow">Glow</a></strong> - "Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI."</li> <li><strong><a href="https://lethain.com/managing-technical-quality/">Managing technical quality in a codebase.</a></strong> - "At a well-run and successful company, most of your previous technical decisions won't meet your current quality threshold."</li> <li><strong><a href="https://github.com/fork-maintainers/iceraven-browser">Iceraven Browser!</a></strong> - "Our goal is to be a close fork of the new Firefox for Android that seeks to provide users with more options, more opportunities to customize (including a broad extension library), and more information about the pages they visit and how their browsers are interacting with those pages."</li> <li><strong><a href="https://www.jamalx31.com/post/themed-days-timeboxing-and-why-you-should-use-them">Themed days, Timeboxing and why you should use them.</a></strong> - Maximize your time by minimizing context switching.</li> <li><strong><a href="https://redmonk.com/sogrady/2020/10/06/developer-experience-gap/">The Developer Experience Gap</a></strong> - "The technology landscape today is a Scrooge McDuck-level embarrassment of riches."</li> <li><strong><a href="https://andreschweighofer.com/tech/how-to-measure-technical-debt/">How to measure technical debt</a></strong> - An attempt at a taxonomy.</li> <li><strong><a href="https://github.com/bunkerity/bunkerized-nginx">bunkerized-nginx</a></strong> - "nginx Docker image secure by default."</li> <li><strong><a href="https://joshwcomeau.com/accessibility/hands-free-coding/">Hands-Free Coding</a></strong> - "How I develop software using dictation and eye-tracking"</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://github.com/charmbracelet/glow">Glow</a></strong> - "Glow is a terminal based markdown reader designed from the ground up to bring out the beauty—and power—of the CLI."</li> <li><strong><a href="https://lethain.com/managing-technical-quality/">Managing technical quality in a codebase.</a></strong> - "At a well-run and successful company, most of your previous technical decisions won't meet your current quality threshold."</li> <li><strong><a href="https://github.com/fork-maintainers/iceraven-browser">Iceraven Browser!</a></strong> - "Our goal is to be a close fork of the new Firefox for Android that seeks to provide users with more options, more opportunities to customize (including a broad extension library), and more information about the pages they visit and how their browsers are interacting with those pages."</li> <li><strong><a href="https://www.jamalx31.com/post/themed-days-timeboxing-and-why-you-should-use-them">Themed days, Timeboxing and why you should use them.</a></strong> - Maximize your time by minimizing context switching.</li> <li><strong><a href="https://redmonk.com/sogrady/2020/10/06/developer-experience-gap/">The Developer Experience Gap</a></strong> - "The technology landscape today is a Scrooge McDuck-level embarrassment of riches."</li> <li><strong><a href="https://andreschweighofer.com/tech/how-to-measure-technical-debt/">How to measure technical debt</a></strong> - An attempt at a taxonomy.</li> <li><strong><a href="https://github.com/bunkerity/bunkerized-nginx">bunkerized-nginx</a></strong> - "nginx Docker image secure by default."</li> <li><strong><a href="https://joshwcomeau.com/accessibility/hands-free-coding/">Hands-Free Coding</a></strong> - "How I develop software using dictation and eye-tracking"</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-26T00:00:00-05:00",
+        "date_modified": "2020-10-24T01:43:37-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/23/double-shot-2712,
+        "url": "https://afreshcup.com/home/2020/10/23/double-shot-2712.html",
+        "title": Double Shot #2712,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://blog.odoom.net/defective-devops/">Defective DevOps</a></strong> - Good DevOps takes time, and communication is more important than tools.</li> <li><strong><a href="https://webpack.js.org/blog/2020-10-10-webpack-5-release/">Webpack 5 release</a></strong> - "So today (2020-10-10) webpack 5.0.0 is released, but this doesn't mean it's done, bugfree or even feature-complete."</li> <li><strong><a href="https://blog.joshsoftware.com/2020/09/23/departure-rb/">Departure.rb</a></strong> - Non-locking MySQL migrations backed by pt-online-schema-change.</li> <li><strong><a href="https://shkspr.mobi/blog/2020/10/please-stop-using-cdns-for-external-javascript-libraries/">Please stop using CDNs for external Javascript libraries</a></strong> - Probably tilting at windmills these days, but valid points.</li> <li><strong><a href="https://www.percona.com/blog/2020/10/14/announcing-pg_stat_monitor-tech-preview-get-better-insights-into-query-performance-in-postgresql/">Announcing pg_stat_monitor Tech Preview: Get Better Insights Into Query Performance in PostgreSQL</a></strong> - A new tool from Percona.</li> <li><strong><a href="https://towardsdatascience.com/its-time-to-say-goodbye-to-docker-5cfec8eff833?gi=21d77826c645">You Don’t Have to Use Docker Anymore</a></strong> - It's not the only container game in town.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://blog.odoom.net/defective-devops/">Defective DevOps</a></strong> - Good DevOps takes time, and communication is more important than tools.</li> <li><strong><a href="https://webpack.js.org/blog/2020-10-10-webpack-5-release/">Webpack 5 release</a></strong> - "So today (2020-10-10) webpack 5.0.0 is released, but this doesn't mean it's done, bugfree or even feature-complete."</li> <li><strong><a href="https://blog.joshsoftware.com/2020/09/23/departure-rb/">Departure.rb</a></strong> - Non-locking MySQL migrations backed by pt-online-schema-change.</li> <li><strong><a href="https://shkspr.mobi/blog/2020/10/please-stop-using-cdns-for-external-javascript-libraries/">Please stop using CDNs for external Javascript libraries</a></strong> - Probably tilting at windmills these days, but valid points.</li> <li><strong><a href="https://www.percona.com/blog/2020/10/14/announcing-pg_stat_monitor-tech-preview-get-better-insights-into-query-performance-in-postgresql/">Announcing pg_stat_monitor Tech Preview: Get Better Insights Into Query Performance in PostgreSQL</a></strong> - A new tool from Percona.</li> <li><strong><a href="https://towardsdatascience.com/its-time-to-say-goodbye-to-docker-5cfec8eff833?gi=21d77826c645">You Don’t Have to Use Docker Anymore</a></strong> - It's not the only container game in town.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-23T00:00:00-05:00",
+        "date_modified": "2020-10-19T07:11:26-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/22/double-shot-2711,
+        "url": "https://afreshcup.com/home/2020/10/22/double-shot-2711.html",
+        "title": Double Shot #2711,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://jakobgreenfeld.com/gut">The Grand Unified Theory of Product Ideation</a></strong> - Various ways to think about generating new product ideas.</li> <li><strong><a href="https://mensfeld.pl/2020/10/diffend-ruby-security/">Diffend – OSS supply chain security and management platform for Ruby</a></strong> - Moving along fast.</li> <li><strong><a href="https://larahogan.me/blog/jumping-to-director-level-work/">What happens if you become a director without being a manager first?</a></strong> - You have to learn new skills really fast, for one thing.</li> <li><strong><a href="https://medium.com/better-programming/modern-day-architecture-design-patterns-for-software-professionals-9056ee1ed977">Modern-Day Architecture Design Patterns for Software Professionals</a></strong> - "Circuit Breaker, CQRS, Event Sourcing, Sidecar, Backend-for-Frontend, and Strangler"</li> <li><strong><a href="https://cloudberry.engineering/article/dockerfile-security-best-practices/">Dockerfile Security Best Practices</a></strong> - There are always new ways to shoot yourself in the foot.</li> <li><strong><a href="https://povilasv.me/waterfall-ish-how-not-to-build-a-cloud-native-organization/">Waterfall-ish: how not to build a Cloud-Native organization</a></strong> - Cloud-native theater is a thing these days.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://jakobgreenfeld.com/gut">The Grand Unified Theory of Product Ideation</a></strong> - Various ways to think about generating new product ideas.</li> <li><strong><a href="https://mensfeld.pl/2020/10/diffend-ruby-security/">Diffend – OSS supply chain security and management platform for Ruby</a></strong> - Moving along fast.</li> <li><strong><a href="https://larahogan.me/blog/jumping-to-director-level-work/">What happens if you become a director without being a manager first?</a></strong> - You have to learn new skills really fast, for one thing.</li> <li><strong><a href="https://medium.com/better-programming/modern-day-architecture-design-patterns-for-software-professionals-9056ee1ed977">Modern-Day Architecture Design Patterns for Software Professionals</a></strong> - "Circuit Breaker, CQRS, Event Sourcing, Sidecar, Backend-for-Frontend, and Strangler"</li> <li><strong><a href="https://cloudberry.engineering/article/dockerfile-security-best-practices/">Dockerfile Security Best Practices</a></strong> - There are always new ways to shoot yourself in the foot.</li> <li><strong><a href="https://povilasv.me/waterfall-ish-how-not-to-build-a-cloud-native-organization/">Waterfall-ish: how not to build a Cloud-Native organization</a></strong> - Cloud-native theater is a thing these days.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-22T00:00:00-05:00",
+        "date_modified": "2020-10-19T07:11:26-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/21/double-shot-2710,
+        "url": "https://afreshcup.com/home/2020/10/21/double-shot-2710.html",
+        "title": Double Shot #2710,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://manuel.darcemont.fr/posts/focus-on-jour-job/">Advice to my young self: forget side projects and focus on your job</a></strong> - "The best way to dig a new technology is to practice it in your daily job."</li> <li><strong><a href="https://aj.codes/post/branch-agnostic-git-aliases/">Branch Agnostic Git Aliases</a></strong> - Renaming your default branches doesn't have to be a mess.</li> <li><strong><a href="https://whileydave.com/2020/09/24/the-semantics-of-semantic-versioning/">The Semantics of Semantic Versioning?</a></strong> - Deciding what constitutes a "breaking change" is not cut and dried.</li> <li><strong><a href="https://blog.t8012.dev/plug-n-pwn/">Plug'nPwn - Connect to Jailbreak</a></strong> - Bad things you can do to a Mac with enough hardware chops.</li> <li><strong><a href="https://spin.atomicobject.com/2020/10/07/1-on-1-meeting-covid/">1-on-1 Meetings: More Important than Ever</a></strong> - Staying connected in a time of pandemic.</li> <li><strong><a href="https://ronjeffries.com/articles/020-01ff/why/">Ron, why do you ...</a></strong> - The best agile practices grow out of delivering value.</li> <li><strong><a href="https://github.com/westonganger/active_snapshot">ActiveSnapshot</a></strong> - "Simplified snapshots and restoration for ActiveRecord models and associations with a transparent white-box implementation."</li> <li><strong><a href="https://github.com/dandavison/delta">delta</a></strong> - "A viewer for git and diff output"</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://manuel.darcemont.fr/posts/focus-on-jour-job/">Advice to my young self: forget side projects and focus on your job</a></strong> - "The best way to dig a new technology is to practice it in your daily job."</li> <li><strong><a href="https://aj.codes/post/branch-agnostic-git-aliases/">Branch Agnostic Git Aliases</a></strong> - Renaming your default branches doesn't have to be a mess.</li> <li><strong><a href="https://whileydave.com/2020/09/24/the-semantics-of-semantic-versioning/">The Semantics of Semantic Versioning?</a></strong> - Deciding what constitutes a "breaking change" is not cut and dried.</li> <li><strong><a href="https://blog.t8012.dev/plug-n-pwn/">Plug'nPwn - Connect to Jailbreak</a></strong> - Bad things you can do to a Mac with enough hardware chops.</li> <li><strong><a href="https://spin.atomicobject.com/2020/10/07/1-on-1-meeting-covid/">1-on-1 Meetings: More Important than Ever</a></strong> - Staying connected in a time of pandemic.</li> <li><strong><a href="https://ronjeffries.com/articles/020-01ff/why/">Ron, why do you ...</a></strong> - The best agile practices grow out of delivering value.</li> <li><strong><a href="https://github.com/westonganger/active_snapshot">ActiveSnapshot</a></strong> - "Simplified snapshots and restoration for ActiveRecord models and associations with a transparent white-box implementation."</li> <li><strong><a href="https://github.com/dandavison/delta">delta</a></strong> - "A viewer for git and diff output"</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-21T00:00:00-05:00",
+        "date_modified": "2020-10-19T07:11:26-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/20/double-shot-2709,
+        "url": "https://afreshcup.com/home/2020/10/20/double-shot-2709.html",
+        "title": Double Shot #2709,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://zserge.com/posts/awfice/">world smallest office suite</a></strong> - You can do a lot just with contenteditable and a bit of JavaScript.</li> <li><strong><a href="https://www.2n.pl/blog/apache-jmeter">Application testing with Apache JMeter </a></strong> - A quick look at one load-testing tool.</li> <li><strong><a href="https://blog.cloudflare.com/introducing-cloudflare-one/">Introducing Cloudflare One</a></strong> - "It provides secure, fast, reliable, cost-effective network services, integrated with leading identity management and endpoint security providers."</li> <li><strong><a href="https://cybertec-postgresql.github.io/zheap/">zheap</a></strong> - "zheap is a way to keep table bloat under control by implementing a new PostgreSQL storage engine capable of running UPDATE-intense workloads more efficiently."</li> <li><strong><a href="https://blog.arkency.com/rails-multitenancy-story-in-11-snippets-of-code/">Rails multitenancy story in 11 snippets of code</a></strong> - Sketching out an approach based on PostgreSQL schemas.</li> <li><strong><a href="https://www.hashicorp.com/blog/announcing-waypoint">Announcing HashiCorp Waypoint</a></strong> - "A consistent developer workflow to build, deploy, and release applications across any platform."</li> <li><strong><a href="https://avohq.io/">Avo</a></strong> - A new alternative to ActiveAdmin, though some features are a paid upgrade.</li> <li><strong><a href="http://blog.rlmflores.me/2020/10/14/what_is_expected_of_an_engineering_manager/">What is expected of a Engineering Manager?</a></strong> - An overall framework for thinking about the job.</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://zserge.com/posts/awfice/">world smallest office suite</a></strong> - You can do a lot just with contenteditable and a bit of JavaScript.</li> <li><strong><a href="https://www.2n.pl/blog/apache-jmeter">Application testing with Apache JMeter </a></strong> - A quick look at one load-testing tool.</li> <li><strong><a href="https://blog.cloudflare.com/introducing-cloudflare-one/">Introducing Cloudflare One</a></strong> - "It provides secure, fast, reliable, cost-effective network services, integrated with leading identity management and endpoint security providers."</li> <li><strong><a href="https://cybertec-postgresql.github.io/zheap/">zheap</a></strong> - "zheap is a way to keep table bloat under control by implementing a new PostgreSQL storage engine capable of running UPDATE-intense workloads more efficiently."</li> <li><strong><a href="https://blog.arkency.com/rails-multitenancy-story-in-11-snippets-of-code/">Rails multitenancy story in 11 snippets of code</a></strong> - Sketching out an approach based on PostgreSQL schemas.</li> <li><strong><a href="https://www.hashicorp.com/blog/announcing-waypoint">Announcing HashiCorp Waypoint</a></strong> - "A consistent developer workflow to build, deploy, and release applications across any platform."</li> <li><strong><a href="https://avohq.io/">Avo</a></strong> - A new alternative to ActiveAdmin, though some features are a paid upgrade.</li> <li><strong><a href="http://blog.rlmflores.me/2020/10/14/what_is_expected_of_an_engineering_manager/">What is expected of a Engineering Manager?</a></strong> - An overall framework for thinking about the job.</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-20T00:00:00-05:00",
+        "date_modified": "2020-10-19T07:11:26-05:00",
+        
+        
+        
+        "tags": []
+      }
+      ,
+    
+      {
+        "id": https://afreshcup.com/home/2020/10/19/double-shot-2708,
+        "url": "https://afreshcup.com/home/2020/10/19/double-shot-2708.html",
+        "title": Double Shot #2708,
+        
+          
+          "content_html": <p></p> <ul> <li><strong><a href="https://gilesbowkett.com/blog/2020/10/09/cypress-rails-circle/">Setting Up Cypress, Rails, and CircleCI</a></strong> - You don't have to use capybara.</li> <li><strong><a href="https://www.theengineeringmanager.com/managing-managers/less-status-updates-more-coaching/">Less status updates, more coaching</a></strong> - One-on-ones really shouldn't be for status updates.</li> <li><strong><a href="https://blog.eyas.sh/2020/10/unity-for-engineers-pt1-basic-concepts/">Basic Concepts in Unity for Software Engineers</a></strong> - A primer for those who dream of moving to game development.</li> <li><strong><a href="http://sentimentalversioning.org/">Sentimental Versioning</a></strong> - "Sometimes a version is just a number, but sometimes what we really want is a poem."</li> <li><strong><a href="https://utsavshah.com/2020/10/12/case-against-low-priority-alerts/">The Case against Low Priority Alerts</a></strong> - If you don't care, why are you alerting?</li> <li><strong><a href="https://www.hashicorp.com/blog/hashicorp-boundary">Announcing HashiCorp Boundary</a></strong> - "Simple and secure remote access — to any system anywhere based on trusted identity."</li> <li><strong><a href="https://solovyov.net/blog/2020/api-pagination-design/">API pagination design</a></strong> - Maybe we should rely on cursors instead of offsets.</li> <li><strong><a href="https://ungoogled-software.github.io/">ungoogled-chromium</a></strong> - "Google Chromium, sans integration with Google"</li> </ul>,
+          "summary": <p></p> <ul> <li><strong><a href="https://gilesbowkett.com/blog/2020/10/09/cypress-rails-circle/">Setting Up Cypress, Rails, and CircleCI</a></strong> - You don't have to use capybara.</li> <li><strong><a href="https://www.theengineeringmanager.com/managing-managers/less-status-updates-more-coaching/">Less status updates, more coaching</a></strong> - One-on-ones really shouldn't be for status updates.</li> <li><strong><a href="https://blog.eyas.sh/2020/10/unity-for-engineers-pt1-basic-concepts/">Basic Concepts in Unity for Software Engineers</a></strong> - A primer for those who dream of moving to game development.</li> <li><strong><a href="http://sentimentalversioning.org/">Sentimental Versioning</a></strong> - "Sometimes a version is just a number, but sometimes what we really want is a poem."</li> <li><strong><a href="https://utsavshah.com/2020/10/12/case-against-low-priority-alerts/">The Case against Low Priority Alerts</a></strong> - If you don't care, why are you alerting?</li> <li><strong><a href="https://www.hashicorp.com/blog/hashicorp-boundary">Announcing HashiCorp Boundary</a></strong> - "Simple and secure remote access — to any system anywhere based on trusted identity."</li> <li><strong><a href="https://solovyov.net/blog/2020/api-pagination-design/">API pagination design</a></strong> - Maybe we should rely on cursors instead of offsets.</li> <li><strong><a href="https://ungoogled-software.github.io/">ungoogled-chromium</a></strong> - "Google Chromium, sans integration with Google"</li> </ul>,
+        
+        
+        
+        "date_published": "2020-10-19T00:00:00-05:00",
+        "date_modified": "2020-10-19T07:11:26-05:00",
+        
+        
+        
+        "tags": []
+      }
+      
+    
+  ]
+}

@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Fresh Cup - page 96</title>
+  <meta name="description" content="Out of business.">
+
+  <link rel="stylesheet" href="../../assets/main.css">
+  <link rel="canonical" href="index.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../about.html">About</a>
+            <a class="page-link" href="../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style>
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+  button.comment-loader {    background-color: #008CBA;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+  article {padding-bottom: 30px;}
+</style>
+
+<div class="home">
+
+  
+
+    <!--
+        Here is the main paginator logic called.
+        All calls to site.posts should be replaced by paginator.posts
+    -->
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/28/whats-new-in-edge-rails-22.html">What&#39;s New in Edge Rails #22</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-28T00:00:00-05:00" itemprop="datePublished">
+              
+              May 28, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <h3>Week of May 21 - May 27, 2012</h3>
+
+<p>In addition to the features I've called out below, there's still plenty of internal tinkering going on with Rails 4.0. This week included some work on deep methods to manipulate hashes and removing a batch of dependencies on <code>Pathname</code>.</p>
+
+<ul>
+	<li>
+<a href="https://github.com/rails/rails/commit/43fa48e5aa981bf86635fa31ace9eede24e93826">43fa48e5</a> moves the root route to the top of the generated routes.rb file. I'm mildly surprised that this hasn't spawned another flame war.</li>
+	<li>As of <a href="https://github.com/rails/rails/commit/1ce4b5b33d694eeebdb0495aef70d8d1b50cd02d">1ce4b5b3</a> and <a href="https://github.com/rails/rails/commit/b02d14aad515a039c284c93a68845503dc1658e2">b02d14aa</a> there is broader helper support for various HTML5 input types, including color, month, week, datetime, and datetime-local.</li>
+	<li>You can use the <code>/rails/info/routes</code> path in development to show the equivalent of <code>rake routes</code> in the browser starting with <a href="https://github.com/rails/rails/commit/cb44e0fed97d7cef024e9dd9cc113a75cc7d6f20">cb44e0fe</a>.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/28/double-shot-887.html">Double Shot #887</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-28T00:00:00-05:00" itemprop="datePublished">
+              
+              May 28, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Summer camping schedule is going to mean skipping a few days here and there. So it goes.</p>
+
+<ul>
+	<li>
+<strong><a href="https://github.com/winston/cactus">cactus</a></strong> - A testing framework for your CSS.</li>
+	<li>
+<strong><a href="https://github.com/wbailey/claws">CLAWS</a></strong> - Command-line tool for managing AWS servers.</li>
+	<li>
+<strong><a href="http://trollop.rubyforge.org/">Trollop</a></strong> - Simple command line option parser for ruby.</li>
+	<li>
+<strong><a href="http://alindeman.github.com/2012/05/23/introducing-rake-rails.html">Introducing rake-rails</a></strong> - Delegate rake commands to corresponding rails commands so you don't have to remember which is which.</li>
+	<li>
+<strong><a href="http://www.thegeekstuff.com/2011/09/linux-htop-examples/">Top on steroids - 15 Practical Linux HTOP Examples</a></strong> - I'm not a sysadmin, but this article helps when I want to pretend.</li>
+	<li>
+<strong><a href="http://www.cheatsheetapp.com/CheatSheet/">Cheatsheet</a></strong> - Easy way to get all the active short cuts in the current OS X application.</li>
+	<li>
+<strong><a href="http://jamesgolick.com/2012/5/22/objectify-a-better-way-to-build-rails-applications.html">Objectify: A Better Way to Build Rails Applications</a></strong> - Framework that sits on top of Rails to enable more object-oriented purity.</li>
+	<li>
+<strong><a href="http://developwithstyle.com/articles/2012/05/23/lessons-learnt-from-building-a-rest-based-api/">Lessons Learnt from Building a REST API</a></strong> - Starting with the premise of not using Rails for something that ought to be as fast as possible.</li>
+	<li>
+<strong><a href="https://github.com/maccman/sprockets-source-url">sprockets-source-url</a></strong> - Support for generation of <a href="http://pmuellr.blogspot.com/2009/06/debugger-friendly.html">source URLs</a> in scripts compiled with sprockets.</li>
+	<li>
+<strong><a href="http://postmodern.github.com/2012/05/22/rubygems-tasks.html">RubyGems Tasks</a></strong> - An attempt to put together a minimal set of non opinionated features for building gems via Rake tasks.</li>
+	<li>
+<strong><a href="https://github.com/lonelyplanet/fozzie">Fozzie</a></strong> - Gem for sending things to Statsd.</li>
+	<li>
+<strong><a href="https://github.com/diemer/RubyMotionSublimeCompletions">Sublime Text 2 Completions for RubyMotion</a></strong> - Make life easier if you're developing RM apps in ST2.</li>
+	<li>
+<strong><a href="http://compass-style.org/blog/2012/05/20/removing-blueprint/">Removing Blueprint from Compass in 0.13</a></strong> - The Compass CSS authoring framework is going to become grid-agnostic.</li>
+	<li>
+<strong><a href="http://www.macbartender.com/">Bartender</a></strong> - App to organize your OS X menu bar. Definitely helped out on my messy dev box.</li>
+	<li>
+<strong><a href="http://bearcss.com/">Bear CSS</a></strong> - Upload a HTML document, get back a CSS template based on the markup that you used.</li>
+	<li>
+<strong><a href="http://dickey.xxx/mysql-is-done-it-s-the-postgres-age">MySQL is done. It's the Postgres Age.</a></strong> - I'm feeling this more and more lately myself.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/23/double-shot-886.html">Double Shot #886</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-23T00:00:00-05:00" itemprop="datePublished">
+              
+              May 23, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Happy anniversary to my wonderful wife. And to me, of course.</p>
+
+<ul>
+	<li>
+<strong><a href="http://www.uberconference.com/zRY5S2Df">UberConference</a></strong> - Looks like an interesting try at reworking the conference call market, from the guy behind Grand Central.</li>
+	<li>
+<strong><a href="http://gettingreal.37signals.com/">Getting Real</a></strong> - The 37signals book, now available as a free PDF.</li>
+	<li>
+<strong><a href="http://stackoverflow.com/questions/7386766/chrome-1px-unavoidable-spacing-between-td">Chrome 1px unavoidable spacing between td</a></strong> - Happens on Safari, too. A bug that cost me a few hours yesterday.</li>
+	<li>
+<strong><a href="http://schneems.com/post/23543653526/sextant-a-gem-to-help-you-find-your-routes">Sextant: A Gem to Help you Find your Routes</a></strong> - A browser-based alternative to rake routes.</li>
+	<li>
+<strong><a href="http://blog.railsapps.org/post/23519566509/rails-apps-composer-version-1-5-0">Rails Apps Composer version 1.5.0</a></strong> - New release of a flexible recipe-based app generator.</li>
+	<li>
+<strong><a href="https://github.com/mislav/polyamory">polyamory</a></strong> - Test runner that understands Cucumber, RSpec, Shoulda, Test::Unit and more.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/22/double-shot-885.html">Double Shot #885</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-22T00:00:00-05:00" itemprop="datePublished">
+              
+              May 22, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Soothing myself with nice code before looking at ugly tests.</p>
+
+<ul>
+	<li>
+<strong><a href="http://github-trends.oscardelben.com/">GitHub Trends</a></strong> - Handy RSS feeds to keep track of top projects.</li>
+	<li>
+<strong><a href="http://baconipsum.com/">Bacon Ipsum</a></strong> - Another text generator for people tired of lorem ipsum.</li>
+	<li>
+<strong><a href="http://angryamoeba.co.uk/spahql-announce/">SpahQL</a></strong> - A query language for Javascript objects - Make dealing with structured data on the client a bit easier.</li>
+	<li>
+<strong><a href="http://panic.com/coda/">Coda 2</a></strong> - Looks like a spiffy upgrade to this all-in-one web coding IDE. Check out the iPad version <strong><a href="http://panic.com/dietcoda/">Diet Coda</a></strong> too.</li>
+	<li>
+<strong><a href="http://www.gumbyframework.com/">Gumby</a></strong> - A new responsive CSS framework.</li>
+	<li>
+<strong><a href="http://wiki.darkpatterns.org/Home">Dark Patterns: User Interfaces Designed to Trick People</a></strong> - I think I've had clients who kept this site bookmarked.</li>
+	<li>
+<strong><a href="http://xing.github.com/wysihtml5/">wysihtml5</a></strong> - HTML5 rich text editor that degrades to a textarea on older browsers.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/21/whats-new-in-edge-rails-21.html">What&#39;s New in Edge Rails #21</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-21T00:00:00-05:00" itemprop="datePublished">
+              
+              May 21, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <h3>Week of May 14 - May 20, 2012</h3>
+
+<p>In addition to the code changes below, I want to mention the contributors to docrails, who are doing a great job of keeping the Guides up to date with the edge code. Check out their work at <strong><a href="http://edgeguides.rubyonrails.org/">http://edgeguides.rubyonrails.org/</a></strong>.</p>
+
+<ul>
+	<li>
+<a href="https://github.com/rails/rails/commit/683fc4db00f496e5225928afb4d4e932e0fcdc48">683fc4db</a> changes <code>:disable_with</code> to <code>data-disable-with</code> in various tag helpers for consistency with other attributes handled by the unobtrusive JavaScript drivers. <a href="https://github.com/rails/rails/commit/dd42e8905830f96db29d49ed4bd44eeca5195de3">dd42e890</a> further tweaks this to use the <code>:data =&gt; { :disable_with =&gt; ... }</code> form of the API in examples.</li>
+	<li>With <a href="https://github.com/rails/rails/commit/3f352d040575c9a08d13e10fd6191fbf2fa674ba">3f352d04</a> <code>Model.pluck</code> supports SQL fragments (such as <code>DISTINCT name</code> as well as attribute names.</li>
+	<li>You can now tell Rails to pass templates through undisturbed by using the .raw extension, as of <a href="https://github.com/rails/rails/commit/8bea607265a2c9bb9bb2188b0a79089ca373b814">8bea6072</a>.</li>
+	<li>
+<a href="https://github.com/rails/rails/commit/446940c366d588e7e895a64caf325f5f99cba0fb">446940c3</a> brings in helpers for the HTML5 time input tag.</li>
+	<li>Check the changelog update in <a href="https://github.com/rails/rails/commit/103ce300ec7507d235ca31efe61033f0b7a601c0">103ce300</a> for details about the deprecation of most dynamic finder methods in Active Record, and how to rewrite them in your code. No rush on this because they won't be gone until Rails 5.0, but it's good to stay up to date.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/21/double-shot-884.html">Double Shot #884</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-21T00:00:00-05:00" itemprop="datePublished">
+              
+              May 21, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Aren't things supposed to slow down in the summer? No?</p>
+
+<ul>
+	<li>
+<strong><a href="https://github.com/nathanl/authority">Authority</a></strong> - Authorization gem for Rails applications.</li>
+	<li>
+<strong><a href="https://github.com/fxposter/carrierwave-processing">CarrierWave::Processing</a></strong> - Add-on image processors for CarrierWave, including image quality adjustment.</li>
+	<li>
+<strong><a href="http://batchiplocator.webatu.com/">Batch IP Locator</a></strong> - Geocode and map multiple IP addresses at one time.</li>
+	<li>
+<strong><a href="https://github.com/dingbat/nsrails">NSRails</a></strong> - Objective-C framework to talk to Rails objects, including REST API and synchronization.</li>
+	<li>
+<strong><a href="http://support.mozilla.org/en-US/kb/reset-firefox-easily-fix-most-problems">Reset Firefox - easily fix most problems</a></strong> - Coming soon, a way to reset your profile without losing things like bookmarks and history.</li>
+	<li>
+<strong><a href="https://github.com/ruby-ore/ore/blob/master/README.md#description">Ore</a></strong> - Templated ruby project generator.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/18/double-shot-883.html">Double Shot #883</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-18T00:00:00-05:00" itemprop="datePublished">
+              
+              May 18, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>It's gonna be another very long day.</p>
+
+<ul>
+	<li>
+<strong><a href="http://www.codeschool.com/free-weekend">Free Weekend on Code School</a></strong> - Coming this weekend. A pretty good deal if you want to improve your ruby skills.</li>
+	<li>
+<strong><a href="http://mattrogish.com/blog/2012/05/17/vagrant-a-repeatable-dev-project-setup/">Vagrant and Weewee: A Repeatable Dev Project Setup</a></strong> - How to set up your own base box to bootstrap your projects from.</li>
+	<li>
+<strong><a href="http://mir.aculo.us/2012/05/17/the-trouble-with-light-boxes/">The trouble with light boxes</a></strong> - And what to do about them on mobile sites.</li>
+	<li>
+<strong><a href="http://37signals.com/svn/posts/3176-three-quick-rails-console-tips">Three quick Rails console tips</a></strong> - And they're well worth knowing.</li>
+	<li>
+<strong><a href="http://git-animals.tumblr.com/">git-animals</a></strong> - "Animals using git". And yes, it's as silly as it sounds.</li>
+	<li>
+<strong><a href="https://gist.github.com/2715918">PostgreSQL as JSON Document Store</a></strong> - One way to use the stuff that's coming in 9.2.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/17/double-shot-882.html">Double Shot #882</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-17T00:00:00-05:00" itemprop="datePublished">
+              
+              May 17, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>New staging server held hostage by bacteria. Bah.</p>
+
+<ul>
+	<li>
+<strong><a href="https://github.com/mroth/lolcommits">lolcommits</a></strong> - Take a snapshot with your webcam every time you make a code commit. The rise of developer narcissism continues.</li>
+	<li>
+<strong><a href="http://css-tricks.com/sass-vs-less/">SASS vs. LESS</a></strong> - Long comparison of these two CSS preprocessors. SASS comes out on top, but both are good.</li>
+	<li>
+<strong><a href="http://humblesoftware.com/flotr2/index">flotr2</a></strong> - HTML 5 graphing library with lots of nifty examples.</li>
+	<li>
+<strong><a href="http://www.youtube.com/watch?v=bzkRVzciAZg">Node.js Is Bad Ass Rock Star Tech</a></strong> - 5 minutes of poking fun at hipster rockstar programmers. "You are the reason science was set back a thousand years."</li>
+	<li>
+<strong><a href="https://github.com/marshally/rspec-rails-uncommitted">rspec-rails-uncommitted</a></strong> - Rake tasks to run specs for all uncommitted, unpushed, or unmerged files in your project.</li>
+	<li>
+<strong><a href="https://github.com/mhfs/devise-async">Devise Async</a></strong> - Send Devise emails using Resque, Sidekiq, or DJ.</li>
+	<li>
+<strong><a href="http://www.sourceninja.com/">SourceNinja</a></strong> - Monitor your software to know when there are patches available to the bits you depend on.</li>
+	<li>
+<strong><a href="https://github.com/nesquena/sheet_mapper">SheetMapper</a></strong> - Connect spreadsheet rows to ruby objects.</li>
+	<strong><a href="http://www.feedsapp.com/">Feeds</a></strong> - Get notifications from GitHub, Basecamp, Trello and other services in your Mac menu bar.
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/16/double-shot-881.html">Double Shot #881</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-16T00:00:00-05:00" itemprop="datePublished">
+              
+              May 16, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Wrote some good code yesterday, at the expense of not writing enough good emails.</p>
+
+<ul>
+	<li>
+<strong><a href="http://www.h-online.com/open/news/item/PostgreSQL-9-2-beta-improves-scalability-adds-JSON-1573815.html">PostgreSQL 9.2 beta improves scalability, adds JSON</a></strong> - Lots of yummy goodness coming in the next version, which seems to be moving far faster than MySQL these days.</li>
+	<li>
+<strong><a href="https://play.google.com/store/apps/details?id=org.mozilla.firefox_beta">Firefox Beta</a></strong> - For Android. If only I had any interest in phones I'd be all over this.</li>
+	<li>
+<strong><a href="http://robots.thoughtbot.com/post/23039827914/get-your-callbacks-on-with-factory-girl-3-3">Get your callbacks on with Factory Girl 3.3</a></strong> - The leading factory solution for rails continues to move forward.</li>
+	<li>
+<strong><a href="https://github.com/rudionrails/yell-rails">yell-rails</a></strong> - Easy integration of the YELL logging library into your Rails 3.x projects.</li>
+	<li>
+<strong><a href="http://instagram-engineering.tumblr.com/post/23132009381/redis-faina-a-query-analysis-tool-for-redis">redis-faina: a query analysis tool for Redis</a></strong> - See where things are slow inside your Redis installation.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/15/double-shot-880.html">Double Shot #880</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-15T00:00:00-05:00" itemprop="datePublished">
+              
+              May 15, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Our Cub Scout Day Camp is blessed with an abundance of rangemasters this year.</p>
+
+<ul>
+	<li>
+<strong><a href="https://hacks.mozilla.org/2012/05/the-web-developer-toolbox-raphael/">The Web Developer Toolbox: Raphaël</a></strong> - Hacks.mozilla.org starts a series looking at useful libraries for web developers, starting with this interface to SVG.</li>
+	<li>
+<strong><a href="https://github.com/mpapis/rubygems-bundler">rubygems-bundler</a></strong> - This tool to eliminate 'bundle exec' is at 1.0 now.</li>
+	<li>
+<strong><a href="https://github.com/bshack/jQuery.ish">jQuery.ish 0.2</a></strong> - jQuery compatible syntax for core features in under 500 bytes.</li>
+	<li>
+<strong><a href="http://www.softwareishard.com/blog/planet-mozilla/monitor-http-traffic-on-mobilefennec/">Monitor HTTP Traffic on Mobile/Fennec</a></strong> - Firebug's Net panel for Android devices.</li>
+	<li>
+<strong><a href="http://codingfearlessly.com/2012/05/14/git-playback/">git-playback</a></strong> - Slide show creation from git commits.</li>
+	<li>
+<strong><a href="http://aws.typepad.com/aws/2012/05/amazon-cloudfront-support-for-dynamic-content.html">Amazon CloudFront - Support for Dynamic Content</a></strong> - Amazon's CDN knows what to do with querystrings now.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/14/whats-new-in-edge-rails-20.html">What&#39;s New in Edge Rails #20</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-14T00:00:00-05:00" itemprop="datePublished">
+              
+              May 14, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <h3>Week of May 7 - May 13, 2012</h3>
+
+<p>As usual, I'm only pulling out the things that look most interesting to developers using Rails; there's a great deal of work still happening on Rails 4.0 internals. This work is valuable and necessary, but it's the part of the iceberg that remains underwater for most Rails users.</p>
+
+<p>Some time in the last week or two, by the way, Rails master passed 30,000 commits.</p>
+
+<ul>
+	<li>
+<a href="https://github.com/rails/rails/commit/ceb1dcc3dbd4f3e5d42f46bb5746c87c1fcf47ff">ceb1dcc3</a> adds a default <a href="http://humanstxt.org/">humans.txt</a> to new Rails projects.</li>
+	<li>
+<a href="https://github.com/rails/rails/commit/b8f394f4a381e0b4cefd289df7cf7281bf0f79e9">b8f394f4</a> changes the behavior of Object#try to only use public methods of the target object.</li>
+	<li>
+<code>ActiveRecord::Store</code> allows you to specify the encoding for serialized attributes starting with <a href="https://github.com/rails/rails/commit/3c0bf0435cfbc7a349faec5e1b5631e506b5dc70">3c0bf043</a>. This allows you to choose JSON, YAML, Marshal, or your own custom storage format.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/14/double-shot-879.html">Double Shot #879</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-14T00:00:00-05:00" itemprop="datePublished">
+              
+              May 14, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Oh look, it's Monday again.</p>
+
+<ul>
+	<li>
+<strong><a href="http://rubymotionweekly.com/">RubyMotion Weekly</a></strong> - New email newsletter to bring you all things RubyMotion.</li>
+	<li>
+<strong><a href="http://code.google.com/p/android-query/">Android Query</a></strong> - UI and asynchronous library for Android coding inspired by jQuery.</li>
+	<li>
+<strong><a href="http://mobtvse.com/">MOBtvse</a></strong> - Rails- and Markdown-based blogging platform.</li>
+	<li>
+<strong><a href="http://blog.railsware.com/2012/05/11/libskypekit-and-skypekit-c-and-ruby-interface-for-skype/">Libskypekit and Skypekit - C and Ruby interface for Skype</a></strong> - Skype is one of those pieces of software I use but detest, so I hope I never have the need for this.</li>
+	<li>
+<strong><a href="https://github.com/devstructure/blueprint">blueprint</a></strong> - Reverse-engineer a running server to puppet or chef recipes.</li>
+	<li>
+<strong><a href="http://mbebenita.github.com/Mvm/">*JS: Low-Level JavaScript</a></strong> - Prototype of a typed dialect of JavaScript from Mozilla. <strong><a href="https://github.com/syg/heap.coffee/">heap.coffee</a></strong> applies the same ideas to CoffeeScript.</li>
+	<li>
+<strong><a href="http://www.notesfromandy.com/2012/05/10/a-quick-look-at-dash-for-doc-browsing/">A quick look at Dash for doc browsing</a></strong> - I've been finding Dash quite useful myself; here's an extended review.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/11/double-shot-878.html">Double Shot #878</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-11T00:00:00-05:00" itemprop="datePublished">
+              
+              May 11, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>End of another week, yay.</p>
+
+<ul>
+	<li>
+<strong><a href="http://hordeofneurons.com/2012/05/02/freelance/">Freelance</a></strong> - Freelancing life in one three-panel cartoon.</li>
+	<li>
+<strong><a href="https://github.com/railsware/caphub">CapHub</a></strong> - Separate your application code from your deployment code.</li>
+	<li>
+<strong><a href="http://www.tech-angels.com/post/22772521112/gemfile-trick-for-github-repositories">Gemfile trick for github repositories</a></strong> - Dunno if it's really a "trick", but Bundler has a built-in shortcut to include code from GitHub to your project.</li>
+	<li>
+<strong><a href="http://anthonyterrien.com/knob/">jQuery Knob demo</a></strong> - Fun little bit of UI experimentation.</li>
+	<li>
+<strong><a href="http://js2coffee.org/">js2coffee</a></strong> - Compile your JavaScript code into CoffeeScript. Could be a useful learning tool.</li>
+	<li>
+<strong><a href="http://dannycroft.co.uk/front-end-unit-testing-with-javascript/">Front-end Unit Testing with JavaScript</a></strong> - Getting started with PhantomJS and CasperJS.</li>
+	<li>
+<strong><a href="http://sqrhedz.com/blog/2012/05/03/app-drone-automate-the-mundane">AppDrone - Automate the Mundane</a></strong> - Create new Rails projects by picking options from a UI.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/10/double-shot-877.html">Double Shot #877</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-10T00:00:00-05:00" itemprop="datePublished">
+              
+              May 10, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Today: A few minutes of email nonsense, and then off to the woods for a work day. Time to get the council camp ready for summer.</p>
+
+<ul>
+	<li>
+<strong><a href="http://niczsoft.com/2012/05/rubygems-bundler-integration-gem-1-0-0/">No more "bundle exec…"</a></strong> - Work proceeds on the integration between Bundler, ruby, and rubygems, including a gem to make things work today.</li>
+	<li>
+<strong><a href="http://html9responsiveboilerstrapjs.com/">HTML9 Responsive Boilerstrap JS</a></strong> - Put a fork in it, web development is done.</li>
+	<li>
+<strong><a href="http://blog.heroku.com/archives/2012/5/9/multiple_ruby_version_support_on_heroku/">Multiple Ruby Version Support on Heroku</a></strong> - Heroku apps can now specify which ruby (though not which patch level) they'd like to run under.</li>
+	<li>
+<strong><a href="https://github.com/Benvie/Node.js-Ultra-REPL">UltraREPL</a></strong> - Souped-up REPL for node.js.</li>
+	<li>
+<strong><a href="http://zmoazeni.github.com/gitspective/">gitspective</a></strong> - See your (or anyone else's) GitHub activity on a timeline.</li>
+	<li>
+<strong><a href="https://github.com/campd/scratchpad-gist/">scratchpad-gist</a></strong> - Publish Firefox scratchpads to gists. (Didn't know about scratchpads? Here's <a href="http://blog.mozilla.org/devtools/2011/08/15/introducing-scratchpad/">the basics</a>.)</li>
+	<li>
+<strong><a href="http://blog.railsonfire.com/2012/05/06/Unicorn-on-Heroku.html">How to get 4x the performance out of Heroku with Unicorn</a></strong> - And thus lower the effective price of hosting there.</li>
+	<li>
+<strong><a href="http://psionides.eu/2012/05/06/extending-asset-pipeline-with-custom-preprocessors/">Extending asset pipeline with custom preprocessors</a></strong> - Some advanced usage of Sprockets.</li>
+	<li>
+<strong><a href="http://huangzhimin.com/2012/05/09/bullet-4-released/">bullet 4.0.0 released</a></strong> - Now with eager loading detection for mongoid as well as Active Record.</li>
+	<li>
+<strong><a href="http://bartongeorge.net/2012/05/07/introducing-project-sputnik-developer-laptop/">Introducing Project Sputnik: Developer laptop</a></strong> - Dell is planning a laptop with multiple open source development profiles running under Ubuntu. This is very interesting and could wean some of us off of Macs.</li>
+	<li>
+<strong><a href="http://www.antipope.org/charlie/blog-static/2012/05/bubble-20.html">Bubble 2.0</a></strong> - Charlie Stross joins those of us who've said publicly that VC money is getting very stupid again.</li>
+	<li>
+<strong><a href="http://pgmag.org/01/read">PostgreSQL Magazine</a></strong> - Available in PDF, online, or dead tree editions.</li>
+	<li>
+<strong><a href="http://lessprefixer.com/">LESS Prefixer</a></strong> - Use vendor-prefixed CSS properties without worrying about which prefixes to use.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/09/double-shot-876.html">Double Shot #876</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-09T00:00:00-05:00" itemprop="datePublished">
+              
+              May 9, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Email bankruptcy is starting to seem like a viable alternative. Anyone in the market for some small Rails clients?</p>
+
+<ul>
+	<li>
+<strong><a href="http://blog.plataformatec.com.br/2012/05/i18n-alchemy-localization-and-parsing/">I18n Alchemy - localization and parsing</a></strong> - New gem to handle localizing and parsing date, time, and numeric attributes when getting or setting their values.</li>
+	<li>
+<strong><a href="http://martinfowler.com/bliki/OrmHate.html">OrmHate</a></strong> - Martin Fowler pushes back against some of the current fashion of ORM hating.</li>
+	<li>
+<strong><a href="http://robots.thoughtbot.com/post/22605580334/constrain-yourself">Constrain Yourself</a></strong> - Using constraints in routes.rb to limit the scope of routes.</li>
+	<li>
+<strong><a href="http://blog.bitnami.org/2012/05/rubystack-now-with-rvm-and-devkit.html">RubyStack now with RVM and DevKit support</a></strong> - Latest release of Bitnami's Ruby image includes rvm and ruby 1.9.3-p194.</li>
+	<li>
+<strong><a href="http://everydayrails.com/2012/05/07/everyday-rails-rspec-book-available.html">Everyday Rails Testing with RSpec: Get advance access to my new book now</a></strong> - Well, not mine, but Aaron Sumner, who's writing about TDD with RSpec.</li>
+	<li>
+<strong><a href="https://clutch.io/ab-testing/">Clutch.io</a></strong> - A/B testing for iOS and Android apps.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/08/double-shot-875.html">Double Shot #875</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-08T00:00:00-05:00" itemprop="datePublished">
+              
+              May 8, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>My Cub Scouts say they want to do more camping, fishing, whittling, and science. Gonna be a fun summer.</p>
+
+<ul>
+	<li>
+<strong><a href="http://www.sortmybox.com/">Sortbox</a></strong> - "Like e-mail filters, for your Dropbox". Looks interesting, though I'm always wary of trusting yet another company with access to my data.</li>
+	<li>
+<strong><a href="https://gist.github.com/2601550">Online git man pages</a></strong> - Hook up your local git to open the man pages on git-scm.com. Didn't work for me but my setup is pretty squirrelly.</li>
+	<li>
+<strong><a href="https://github.com/ryandotsmith/queue_classic">queue_classic 2.0</a></strong> - Queue built on top of PostgreSQL. Why didn't I know about this?</li>
+	<li>
+<strong><a href="http://jonathan-jackson.net/2012/05/03/pry-session-102">Pry 102: Advanced Features</a></strong> - A tool I <em>still</em> need to learn. The more I see the more I like though.</li>
+	<li>
+<strong><a href="https://github.com/railsfactory/rubymotion-learn/blob/master/projects.md">rubymotion-learn</a></strong> - Links to all sorts of RubyMotion goodies.</li>
+	<li>
+<strong><a href="https://paydirtapp.com/blog/we-dont-support-ie">We don't support Internet Explorer, and we're calling that a feature</a></strong> - Only a viable strategy in a few niches, I think.</li>
+	<li>
+<strong><a href="http://ianp.org/2012/05/07/rubymotion-and-interface-builder/">RubyMotion and Interface Builder…</a></strong> - Yes, you can use them together.</li>
+	<li>
+<strong><a href="https://hacks.mozilla.org/2012/05/firefox-and-the-release-channels/">Firefox and the release channels</a></strong> - The release cycle plus the distinction between Aurora/Beta/Nightly builds. 99% of the time I happily run on Nightly.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/07/whats-new-in-edge-rails-19.html">What&#39;s New in Edge Rails #19</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-07T00:00:00-05:00" itemprop="datePublished">
+              
+              May 7, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <h3>Week of April 30 - May 6, 2012</h3>
+
+<p>Lots of code tinkering this week, but no huge new features. Here are a few highlights.</p>
+
+<ul>
+	<li>
+<a href="https://github.com/rails/rails/commit/5c1109a68e098188803a6232be55dfff1e5e12eb">5c1109a6</a> adds a <code>-i</code> option to the rails generator to skip building the index.html file that you always delete anyhow.</li>
+	<li>
+<a href="https://github.com/rails/rails/commit/16e7f2f809c586d2d9a27c2b57395350b596e0b7">16e7f2f</a> tweaks the Inflector code so that 'police' no longer singularizes to 'polouse'.</li>
+	<li>
+<code>ActiveRecord::Base#ids</code> shows up in <a href="https://github.com/rails/rails/commit/93076168c4d2209e007a32abc7142cc23782d56a">93076168</a> - it's like <code>pluck</code> specifically for the primary key of the main table.</li>
+	<li>
+<a href="https://github.com/rails/rails/commit/07e5301e697d6a02ed3c079aba07c261d53c1846">07e5301e</a> forces the <code>first</code> finder to default to primary key order across all database engines. <a href="https://github.com/rails/rails/commit/489166e114ba3af54b1f2081027cd44078d32bbc">489166e1</a> does the same for <code>last</code>. If you want the old behavior of <code>first</code> you can use <code>take</code>(introduced in <a href="https://github.com/rails/rails/commit/1379375f93c53d4c49fa8592b6117c3ade263f2e">1379375f</a>).</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/07/double-shot-874.html">Double Shot #874</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-07T00:00:00-05:00" itemprop="datePublished">
+              
+              May 7, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>What? Time for computers again instead of hikes and sleeping in a hammock? Oh well.</p>
+
+<ul>
+	<li>
+<strong><a href="http://www.mikeperham.com/2012/05/05/five-common-rails-mistakes">Five Common Rails Mistake</a></strong>s - Welll….good tips here, but I don't think Rails is a "one size fits all" system. Some things that are mistakes in large systems are just fine in small sites.</li>
+	<li>
+<strong><a href="http://www.opalang.org">Opa</a></strong> - Statically typed platform that combines frontend code, backend code, and SQL into one unified framework.</li>
+	<li>
+<strong><a href="https://github.com/pzol/monadic">Monadic</a></strong> - Monads for Ruby.</li>
+	<li>
+<strong><a href="https://github.com/adobe/brackets">Brackets</a></strong> - Code editor for HTML/CSS/JS from Adobe. Written in web technologies itself, it opens as a desktop app but shows its own source code by default. Kinda nifty looking.</li>
+	<li>
+<strong><a href="http://jipiboily.com/2012/monologue-a-simple-blogging-rails-engine">Monologue</a></strong> - "A simple blogging (Rails) engine". Yep, another one.</li>
+	<li>
+<strong><a href="http://jimneath.org/2012/05/05/precompile-assets-using-a-git-hook.html">Precompile Assets Using a Git Hook</a></strong> - Another way to try to handle the slowness of the asset pipeline.</li>
+	<li>
+<strong><a href="http://blog.elevat.eu/2012/05/dead-simple-activerecord-migrations-without-rails/">Dead simple ActiveRecord migrations without Rails</a></strong> - Yep, it's good to remember that you can use plenty of chunks of Rails even when you're not writing Rails apps.</li>
+	<li>
+<strong><a href="http://pragmaticstudio.com/screencasts/rubymotion">RubyMotion Screencast</a></strong> - A free 50-minute primer from Pragmatic.</li>
+	<li>
+<strong><a href="https://github.com/HipByte/RubyMotionSamples">RubyMotion Samples</a></strong> - A collection of goodies on GitHub.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/04/double-shot-873.html">Double Shot #873</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-04T00:00:00-05:00" itemprop="datePublished">
+              
+              May 4, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>Off for another weekend in the woods. </p>
+
+<ul>
+	<li>
+<strong><a href="http://www.rubymotion.com/">RubyMotion</a></strong> - "Unlock the power of Ruby for iOS" That is, you can build native iPad apps in Ruby. This is huge news. Here are a couple of <strong><a href="http://arstechnica.com/business/news/2012/05/exclusive-building-ruby-ios-applications-with-rubymotion.ars">early</a></strong> <strong><a href="http://samsoff.es/posts/rubymotion-review">reviews</a></strong>. Pragmatic has a free <strong><a href="http://pragmaticstudio.com/screencasts/rubymotion">screencast</a></strong> as well.</li>
+	<li>
+<strong><a href="https://github.com/HipByte/RubyMotionSamples">RubyMotionSamples</a></strong> - A collection of code to get you started.</li>
+	<li>
+<strong><a href="http://www.engineyard.com/blog/2012/introducing-bloggy-a-simple-way-to-add-a-jekyll-blog-to-any-rails-application/">Introducing Bloggy: A simple way to add a Jekyll Blog to any Rails application</a></strong> - From the folks at Engine Yard.</li>
+	<li>
+<strong><a href="https://github.com/rhalff/seed_dump">seed_dump</a></strong> - Create a seeds.db file from an existing database.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2012/05/03/double-shot-872.html">Double Shot #872</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2012-05-03T00:00:00-05:00" itemprop="datePublished">
+              
+              May 3, 2012
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <p>This is going to be another of those "ten pounds of stuff in a five pound sack" says.</p>
+
+<ul>
+	<li>
+<strong><a href="http://railsapps.github.com/openssl-certificate-verify-failed.html">OpenSSL Errors and Rails – Certificate Verify Failed – Gem::RemoteFetcher::FetchError</a></strong> - An extensive discussion of what's going on, along with workarounds.</li>
+	<li>
+<strong><a href="http://about.travis-ci.org/blog/announcing-pull-request-support/">Announcing Pull Request Support</a></strong> - Travis CI can now check out pull requests before they're merged.</li>
+	<li>
+<strong><a href="http://railscats.com/">Railscats!</a></strong> - For those of you who have trouble typing 'railscasts.com'.</li>
+	<li>
+<strong><a href="http://spreecommerce.com/blog/2012/04/30/spree-1-1-0-released/">Spree 1.1.0 Released</a></strong> - Open source e-commerce moves to Rails 3.2, among other changes.</li>
+	<li>
+<strong><a href="http://blog.madebydna.com/all/code/2011/06/24/eigenclasses-demystified.html">Ruby's Eigenclasses Demystified</a></strong> - Ruby method lookup is more complex than you might think.</li>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+
+  <!--
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  
+  <ul class="pager">
+      
+      <li class="previous">
+          <a href="../95/index.html">&larr; Newer Posts</a>
+      </li>
+      
+      
+      <li class="next">
+          <a href="../97/index.html">Older Posts &rarr;</a>
+      </li>
+      
+  </ul>
+  
+
+  <p class="rss-subscribe">subscribe <a href="../../feed.xml">via RSS</a></p>
+
+</div>
+
+
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

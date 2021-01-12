@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Active Storage Samples</title>
+  <meta name="description" content="Active Storage is still moving along at a fast clip, so I figured it would be good to update my test code. You can find all the examples here in my repo at h...">
+
+  <link rel="stylesheet" href="../../../../assets/main.css">
+  <link rel="canonical" href="activestorage-samples.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../../../about.html">About</a>
+            <a class="page-link" href="../../../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Active Storage Samples</h1>
+    <p class="post-meta">
+      <time datetime="2017-07-23T00:00:00-05:00" itemprop="datePublished">
+        
+        Jul 23, 2017
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p><a href="https://github.com/rails/activestorage">Active Storage</a> is still moving along at a fast clip, so I figured it would be good to update my test code. You can find all the examples here in my repo at <a href="https://github.com/ffmike/activestorage_sample">https://github.com/ffmike/activestorage_sample</a></p>
+
+<h4>A Note On Code Stability</h4>
+
+<p>It isn't. Active Storage has been merged to the main Rails project now, but it's not yet merged to master. Expect further changes and improvements, as well as potentially broken things.</p>
+
+<p>That said, I'll try to keep this article &amp; the associated samples up-to-date. No promises though.</p>
+
+<p><strong>Change History</strong></p>
+
+<ul>
+  <li>
+    <p>8 August 2017</p>
+    <ul>
+      <li>Switch to master branch of Rails</li>
+      <li>Update name of Azure service</li>
+    </ul>
+  </li>
+  <li>
+    <p>2 August 2017</p>
+    <ul>
+      <li>Switch to Rails with merged Active Storage, remove separate Active Storage gem.</li>
+      <li>Switched to using `url_for(document.url)` in show. See https://github.com/rails/activestorage/commit/d0e90b4a9dc1accd4f1044fde0dd9a347cd0afcf and future plans at https://github.com/rails/activestorage/issues/77 .</li>
+      <li>Added Microsoft Azure sample.</li>
+      <li>Added direct upload sample.</li>
+    </ul>
+  </li>
+  <li>
+    <p>24 July 2017</p>
+    <ul>
+      <li>Updated database schema. If you used an earlier version of the samples, you'll need to drop &amp; recreate the database.</li>
+      <li>Replaced <code>.url</code> with <code>.service_url</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h4>A New Edge Rails Application</h4>
+
+<p>Start by spinning up a simple application with edge rails:</p>
+
+<p>1. Create a new directory and use whatever you like (rvm, rbenv, chruby) to give it a fresh Ruby environment. I used Ruby 2.4.1 in my testing.</p>
+
+<p>2. Install bundler:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  gem install bundler
+</code></pre>
+</div>
+
+<p>3. Create a simple Gemfile in your new directory:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="n">source</span> <span class="s1">'https://rubygems.org'</span>
+  <span class="n">gem</span> <span class="s1">'rails'</span><span class="p">,</span> <span class="ss">git: </span><span class="s1">'https://github.com/rails/rails.git'</span>
+</code></pre>
+</div>
+
+<p>4. Install Rails and everything it drags in:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  bundle install
+</code></pre>
+</div>
+
+<p>5. Create a new Rails application in the current directory, using the version of Rails you just installed and overwriting the Gemfile:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  bundle <span class="nb">exec </span>rails new . --dev --force
+</code></pre>
+</div>
+
+<p>6. Create and start the simplest possible application:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  bundle <span class="nb">exec </span>rails g scaffold user name:string
+  bundle <span class="nb">exec </span>rails db:create
+  bundle <span class="nb">exec </span>rails db:migrate
+  bundle <span class="nb">exec </span>rails s
+</code></pre>
+</div>
+
+<p>You should now be able to go to <a href="http://localhost:3000/users">http://localhost:3000/users</a> to create and update users. Yay!</p>
+
+<h4>Active Storage with Local File Storage</h4>
+
+<p>Let's start by making sure that Active Storage is working without getting the cloud involved:</p>
+
+<p>1. Create a new branch of code:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b <span class="nb">local</span>
+</code></pre>
+</div>
+
+<p>2. Install Active Storage to your application:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle <span class="nb">exec </span>rails activestorage:install
+</code></pre>
+</div>
+
+<p>This will create the storage and tmp/storage directories in your application, copy a default configuration file to config/storage.yml, and create a new migration. The migration builds the active_storage_blobs and active_storage_attachments tables in your database.</p>
+
+<p>3. Update the database schema:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle <span class="nb">exec </span>rails db:migrate
+</code></pre>
+</div>
+
+<p>4. Set up the development environment to use local storage by adding a line to your development.rb file:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:local</span>
+</code></pre>
+</div>
+
+<p>5. Tell your User model that it has some attached files:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">User</span> <span class="o">&lt;</span> <span class="no">ApplicationRecord</span>
+  <span class="n">has_one_attached</span> <span class="ss">:avatar</span>
+  <span class="n">has_many_attached</span> <span class="ss">:documents</span>
+  <span class="p">.</span><span class="nf">.</span><span class="p">.</span>
+<span class="nf">end</span>
+</code></pre>
+</div>
+
+<p>6. Comment out the amazon, google, microsoft, and mirror sections from the config/storage.yml file. Otherwise, your server won't start, because it will be looking for keys and files that don't exist.</p>
+
+<p>7. Add input fields to app/views/users/_form.html.erb:</p>
+
+<div class="language-erb highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">label</span> <span class="ss">:avatar</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">file_field</span> <span class="ss">:avatar</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">label</span> <span class="ss">:documents</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">file_field</span> <span class="ss">:documents</span><span class="p">,</span> <span class="ss">multiple: </span><span class="kp">true</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>8. Add controls to app/views/users/show.html.erb to display the data</p>
+
+<div class="language-erb highlighter-rouge"><pre class="highlight"><code><span class="nt">&lt;p&gt;</span>
+  <span class="cp">&lt;%=</span> <span class="n">image_tag</span><span class="p">(</span><span class="n">url_for</span><span class="p">(</span><span class="vi">@user</span><span class="p">.</span><span class="nf">avatar</span><span class="p">))</span> <span class="cp">%&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+
+<span class="nt">&lt;p&gt;</span>
+  <span class="nt">&lt;strong&gt;</span>Documents:<span class="nt">&lt;/strong&gt;</span>
+  <span class="nt">&lt;ul&gt;</span>
+    <span class="cp">&lt;%</span> <span class="vi">@user</span><span class="p">.</span><span class="nf">documents</span><span class="p">.</span><span class="nf">each</span> <span class="k">do</span> <span class="o">|</span><span class="n">document</span><span class="o">|</span> <span class="cp">%&gt;</span>
+      <span class="nt">&lt;li&gt;</span><span class="cp">&lt;%=</span> <span class="n">link_to</span> <span class="n">document</span><span class="p">.</span><span class="nf">blob</span><span class="p">.</span><span class="nf">filename</span><span class="p">,</span> <span class="n">url_for</span><span class="p">(</span><span class="n">document</span><span class="p">)</span> <span class="cp">%&gt;</span><span class="nt">&lt;/li&gt;</span>
+    <span class="cp">&lt;%</span> <span class="k">end</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/ul&gt;</span>
+<span class="nt">&lt;p&gt;</span>
+</code></pre>
+</div>
+
+<p>9. Update your users controller to attach the files:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code>  <span class="c1"># POST /users</span>
+  <span class="c1"># POST /users.json</span>
+  <span class="k">def</span> <span class="nf">create</span>
+    <span class="vi">@user</span> <span class="o">=</span> <span class="no">User</span><span class="p">.</span><span class="nf">new</span><span class="p">(</span><span class="n">user_params</span><span class="p">)</span>
+    <span class="n">avatar</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:user</span><span class="p">][</span><span class="ss">:avatar</span><span class="p">]</span>
+    <span class="n">documents</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:user</span><span class="p">][</span><span class="ss">:documents</span><span class="p">]</span>
+
+    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+      <span class="k">if</span> <span class="vi">@user</span><span class="p">.</span><span class="nf">save</span>
+        <span class="k">if</span> <span class="n">avatar</span>
+          <span class="vi">@user</span><span class="p">.</span><span class="nf">avatar</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">avatar</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="k">if</span> <span class="n">documents</span>
+          <span class="vi">@user</span><span class="p">.</span><span class="nf">documents</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="p">{</span> <span class="n">redirect_to</span> <span class="vi">@user</span><span class="p">,</span> <span class="ss">notice: </span><span class="s1">'User was successfully created.'</span> <span class="p">}</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:show</span><span class="p">,</span> <span class="ss">status: :created</span><span class="p">,</span> <span class="ss">location: </span><span class="vi">@user</span> <span class="p">}</span>
+      <span class="k">else</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:new</span> <span class="p">}</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@user</span><span class="p">.</span><span class="nf">errors</span><span class="p">,</span> <span class="ss">status: :unprocessable_entity</span> <span class="p">}</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+
+  <span class="c1"># PATCH/PUT /users/1</span>
+  <span class="c1"># PATCH/PUT /users/1.json</span>
+  <span class="k">def</span> <span class="nf">update</span>
+    <span class="n">avatar</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:user</span><span class="p">][</span><span class="ss">:avatar</span><span class="p">]</span>
+    <span class="n">documents</span> <span class="o">=</span> <span class="n">params</span><span class="p">[</span><span class="ss">:user</span><span class="p">][</span><span class="ss">:documents</span><span class="p">]</span>
+
+    <span class="n">respond_to</span> <span class="k">do</span> <span class="o">|</span><span class="nb">format</span><span class="o">|</span>
+      <span class="k">if</span> <span class="vi">@user</span><span class="p">.</span><span class="nf">update</span><span class="p">(</span><span class="n">user_params</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">avatar</span>
+          <span class="vi">@user</span><span class="p">.</span><span class="nf">avatar</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">avatar</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="k">if</span> <span class="n">documents</span>
+          <span class="vi">@user</span><span class="p">.</span><span class="nf">documents</span><span class="p">.</span><span class="nf">attach</span><span class="p">(</span><span class="n">documents</span><span class="p">)</span>
+        <span class="k">end</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="p">{</span> <span class="n">redirect_to</span> <span class="vi">@user</span><span class="p">,</span> <span class="ss">notice: </span><span class="s1">'User was successfully updated.'</span> <span class="p">}</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:show</span><span class="p">,</span> <span class="ss">status: :ok</span><span class="p">,</span> <span class="ss">location: </span><span class="vi">@user</span> <span class="p">}</span>
+      <span class="k">else</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">html</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">:edit</span> <span class="p">}</span>
+        <span class="nb">format</span><span class="p">.</span><span class="nf">json</span> <span class="p">{</span> <span class="n">render</span> <span class="ss">json: </span><span class="vi">@user</span><span class="p">.</span><span class="nf">errors</span><span class="p">,</span> <span class="ss">status: :unprocessable_entity</span> <span class="p">}</span>
+      <span class="k">end</span>
+    <span class="k">end</span>
+  <span class="k">end</span>
+</code></pre>
+</div>
+
+<p>10. Restart your application. You should now be able to add avatars and documents to users, and retrieve them via the show view.</p>
+
+<h4>Active Storage with Amazon Web Services Storage</h4>
+
+<p>Moving along, here's how to move your Active Storage files over to Amazon S3:</p>
+
+<p>1. Create a new branch of code, starting from the <code>local</code> branch so that you already have the basics:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b aws
+</code></pre>
+</div>
+
+<p>2. Sign in to your AWS account and go to your S3 management console (the URL will be something like https://console.aws.amazon.com/s3/home?region=us-west-2# depending on your region).</p>
+
+<p>3. Create a new bucket (for this tutorial, I'll use <code>gstroop-production</code>). Grant public read access to the bucket.</p>
+
+<p>4. Retrieve the Access Key ID and Secret Access Key for your AWS account. Better yet, create a new pair just for this application.</p>
+
+<p>5. Update your config/storage.yml file with a configuration stanza for Amazon:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">amazon</span><span class="pi">:</span>
+  <span class="s">service</span><span class="pi">:</span> <span class="s">S3</span>
+  <span class="s">access_key_id</span><span class="pi">:</span> <span class="err">****************</span>
+  <span class="s">secret_access_key</span><span class="pi">:</span> <span class="err">*********************************************</span>
+  <span class="s">region</span><span class="pi">:</span> <span class="s">us-west-2</span>
+  <span class="s">bucket</span><span class="pi">:</span> <span class="s">gstroop-production</span>
+</code></pre>
+</div>
+
+<p><strong>NOTE:</strong> Obviously, you need to keep those keys confidential. Don't check them into a public repository, for example. You can use the <a href="http://edgeguides.rubyonrails.org/security.html#custom-secrets">Rails secrets file</a> to store them, or whatever other mechanism you prefer for production secrets.</p>
+
+<p>6. Update your development.rb file to use the Amazon storage:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:amazon</span>
+</code></pre>
+</div>
+
+<p>7. Add the AWS SDK gem to your Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'aws-sdk'</span>
+</code></pre>
+</div>
+
+<p>8. Install the gem:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>9. Restart the application. You should now be able to add user avatars and documents, and have then stored in the S3 bucket that you configured.</p>
+
+<h4>Active Storage with Google Cloud Platform Storage</h4>
+
+<p>You can also store your Active Storage files on Google Cloud Platform:</p>
+
+<p>1. Create a new branch of code, starting from the <code>local</code> branch so that you already have the basics:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b gcs
+</code></pre>
+</div>
+
+<p>2. Sign in to your Google Cloud Platform account and go to your console (the URL will be something like https://console.cloud.google.com/home/dashboard).</p>
+
+<p>3. You need to create a new project, and then a storage bucket inside of the project. Record the names for both so you can add them to your storage.yml file.</p>
+
+<p>4. You'll need to use <a href="https://console.cloud.google.com/apis/credentials/wizard?api=storage-component.googleapis.com&amp;project=gstroop623-172916">GCS's API Manager</a> to create credentials for your new bucket. Create a set of credentials that use the Google Cloud Datastore API. Download your credentials as JSON and store a copy of the file in your project at config/gcs.json.</p>
+
+<p><strong>NOTE:</strong> Obviously, you need to keep the keys in this file confidential. Don't check them into a public repository, for example. Manage it the same way you manage your database.yml or other files containing confidential information.</p>
+
+<p>5. Update your storage.yml file with a configuration stanza for Google:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">google</span><span class="pi">:</span>
+  <span class="s">service</span><span class="pi">:</span> <span class="s">GCS</span>
+  <span class="s">project</span><span class="pi">:</span> <span class="err">*********</span><span class="nv">*-</span><span class="err">******</span>
+  <span class="s">keyfile</span><span class="pi">:</span> <span class="s">&lt;%= Rails.root.join("config/gcs.json") %&gt;</span>
+  <span class="s">bucket</span><span class="pi">:</span> <span class="err">***</span><span class="nv">*-</span><span class="err">******</span><span class="nv">*-</span><span class="err">****</span>
+</code></pre>
+</div>
+
+<p>6. Update your development.rb file to use the Google storage:</p>
+
+<pre>config.active_storage.service = :google</pre>
+
+<p>7. Add the Google Cloud Storage gem to your Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'google-cloud-storage'</span>
+</code></pre>
+</div>
+
+<p>8. Install the gem:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>9. Restart the application. You should now be able to add user avatars and documents, and have then stored in the Google bucket that you configured.</p>
+
+<h4>Active Storage with Microsoft Azure</h4>
+
+<p>You can also store your Active Storage files on Microsoft Azure:</p>
+
+<p>1. Create a new branch of code, starting from the <code>local</code> branch so that you already have the basics:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b azure
+</code></pre>
+</div>
+
+<p>2. Sign in to your Microsoft Azure account and go to your dashboard (https://portal.azure.com).</p>
+
+<p>3. You need to create a new storage account, and then a container inside of the project. Record the names for both so you can add them to your storage.yml file.</p>
+
+<p>4. You'll also need to navigate to "Access Keys" in the Azure portal and record one of your storage account access keys.</p>
+
+<p><strong>NOTE:</strong> Obviously, you need to keep the keys in this file confidential. Don't check them into a public repository, for example. Manage it the same way you manage your database.yml or other files containing confidential information.</p>
+
+<p>5. Update your storage.yml file with a configuration stanza for Azure:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">microsoft</span><span class="pi">:</span>
+  <span class="s">service</span><span class="pi">:</span> <span class="s">AzureStorage</span>
+  <span class="c1"># Note that the path must NOT have a trailing slash</span>
+  <span class="s">path</span><span class="pi">:</span> <span class="s">https://**********.blob.core.windows.net</span>
+  <span class="s">storage_account_name</span><span class="pi">:</span> <span class="err">**********</span>
+  <span class="s">storage_access_key</span><span class="pi">:</span> <span class="err">******************************************</span>
+  <span class="s">container</span><span class="pi">:</span> <span class="err">*************</span>
+</code></pre>
+</div>
+
+<p><strong>NOTE:</strong> Obviously, you need to keep those keys confidential. Don't check them into a public repository, for example. You can use the <a href="http://edgeguides.rubyonrails.org/security.html#custom-secrets">Rails secrets file</a> to store them, or whatever other mechanism you prefer for production secrets.</p>
+
+<p>6. Update your development.rb file to use the Microsoft Azure storage:</p>
+
+<pre>config.active_storage.service = :microsoft</pre>
+
+<p>7. Add the Azure gem to your Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'azure-core'</span>
+</code></pre>
+</div>
+
+<p>8. Install the gem:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>9. Restart the application. You should now be able to add user avatars and documents, and have then stored in the Azure container that you configured.</p>
+
+<p><strong>NOTE:</strong> There is currently a bug preventing attached files being properly retrieved from Azure. See <a href="https://github.com/rails/rails/pull/30135">https://github.com/rails/rails/pull/30135</a></p>
+
+<h4>Active Storage Mirroring</h4>
+
+<p>1. Create a new branch of code, starting from the <code>local</code> branch so that you already have the basics:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b mirror
+</code></pre>
+</div>
+
+<p>2. Create <code>amazon</code> and <code>google</code> stanzas in your config/storage.yml file, following the instructions given above.</p>
+
+<p>3. Update your storage.yml file with a configuration stanza for mirroring:</p>
+
+<div class="language-yaml highlighter-rouge"><pre class="highlight"><code><span class="s">mirror</span><span class="pi">:</span>
+  <span class="s">service</span><span class="pi">:</span> <span class="s">Mirror</span>
+  <span class="s">primary</span><span class="pi">:</span> <span class="s">local</span>
+  <span class="s">mirrors</span><span class="pi">:</span> <span class="pi">[</span> <span class="nv">amazon</span><span class="pi">,</span> <span class="nv">google</span> <span class="pi">]</span>
+</code></pre>
+</div>
+
+<p>4. Update your development.rb file to use the mirrored storage:&lt;</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">config</span><span class="p">.</span><span class="nf">active_storage</span><span class="p">.</span><span class="nf">service</span> <span class="o">=</span> <span class="ss">:mirror</span>
+</code></pre>
+</div>
+
+<p>5. Add both the AWS and Google Cloud Storage gems to your Gemfile:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="n">gem</span> <span class="s1">'aws'</span>
+<span class="n">gem</span> <span class="s1">'google-cloud-storage'</span>
+</code></pre>
+</div>
+
+<p>6. Install the gems:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>bundle install
+</code></pre>
+</div>
+
+<p>7. Restart the application. You should now be able to add user avatars and documents.</p>
+
+<p>What does mirroring do? It gives you built-in redundancy against cloud service failures. In the case of the configuration above:</p>
+
+<ul>
+  <li>Files are uploaded to Amazon and Google, and stored locally.</li>
+  <li>Files are served from local storage.</li>
+</ul>
+
+<p>Should AWS go down for an entire region, you'd only need to change the mirror configuration in your config file, restart your server, and you'd be up and running again.</p>
+
+<h4>Active Storage Variants</h4>
+
+<p>Active Storage also includes built-in support for applying arbitrary transforms to images with MiniMagick. To force all uploaded avatars to 128x128 pixels, follow these steps:</p>
+
+<p>1. Create a new branch of code, starting from the <code>local</code> branch so that you already have the basics:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b variant
+</code></pre>
+</div>
+
+<p>2. Update app/views/users/show.html.erb:</p>
+
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span>
+  <span class="o">&lt;</span><span class="sx">%= image_tag(url_for(@user.avatar.variant(resize: "128x128"))) %&gt;
+&lt;p&gt;
+</span></code></pre>
+</div>
+
+<p>3. Restart the application. Regardless of the size of avatar you upload, it should be displayed at 128x128 pixels.</p>
+
+<p>Active Storage uses a lazy strategy to create variants. No variants are created at upload time. Rather, the first time you try to access a variant it is created and stored, and then the URL gets it from the new storage location.</p>
+
+<h4>Direct Uploads</h4>
+
+<p>If you're using cloud storage, Active Storage includes a JavaScript library that can bypass your server entirely, uploading files directly from the browser to the cloud. To use direct upload with AWS, follow these steps:</p>
+
+<p>1. Create a new branch of code, starting from the <code>aws</code> branch so that you already have the basics, including a working AWS configuration:</p>
+
+<div class="language-shell highlighter-rouge"><pre class="highlight"><code>  git checkout -b direct_upload
+</code></pre>
+</div>
+
+<p>2. Add the Active Storage JavaScript to your app/assets/javascripts/application.js file:</p>
+
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="c1">//= require activestorage</span>
+</code></pre>
+</div>
+
+<p>3. Modify app/views/users/_form.html.erb with the `direct_upload` option:</p>
+
+<div class="language-erb highlighter-rouge"><pre class="highlight"><code>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">label</span> <span class="ss">:avatar</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">file_field</span> <span class="ss">:avatar</span><span class="p">,</span> <span class="ss">direct_upload: </span><span class="kp">true</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+
+  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"field"</span><span class="nt">&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">label</span> <span class="ss">:documents</span> <span class="cp">%&gt;</span>
+    <span class="cp">&lt;%=</span> <span class="n">form</span><span class="p">.</span><span class="nf">file_field</span> <span class="ss">:documents</span><span class="p">,</span> <span class="ss">multiple: </span><span class="kp">true</span><span class="p">,</span> <span class="ss">direct_upload: </span><span class="kp">true</span> <span class="cp">%&gt;</span>
+  <span class="nt">&lt;/div&gt;</span>
+</code></pre>
+</div>
+
+<p>4. Restart the application. You should be able to add user avatars and documents.</p>
+
+<p>5. Update the CORS configuration on your Amazon S3 bucket to allow incoming requests:</p>
+
+<div class="language-xml highlighter-rouge"><pre class="highlight"><code><span class="cp">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="nt">&lt;CORSConfiguration</span> <span class="na">xmlns=</span><span class="s">"http://s3.amazonaws.com/doc/2006-03-01/"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;CORSRule&gt;</span>
+    <span class="nt">&lt;AllowedOrigin&gt;</span>*<span class="nt">&lt;/AllowedOrigin&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>GET<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>POST<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>PUT<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;AllowedMethod&gt;</span>DELETE<span class="nt">&lt;/AllowedMethod&gt;</span>
+    <span class="nt">&lt;MaxAgeSeconds&gt;</span>3000<span class="nt">&lt;/MaxAgeSeconds&gt;</span>
+    <span class="nt">&lt;AllowedHeader&gt;</span>*<span class="nt">&lt;/AllowedHeader&gt;</span>
+<span class="nt">&lt;/CORSRule&gt;</span>
+<span class="nt">&lt;/CORSConfiguration&gt;</span>
+</code></pre>
+</div>
+<p><strong>NOTE:</strong> This is a super-open CORS policy. In a production application, you'll want to lock things down.</p>
+
+<p><strong>NOTE:</strong> At the moment this is working for me in Chrome but not in Firefox. There is some sort of request signing issue that I haven't sussed out. Advice welcome.</p>
+
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://afreshcup.com/home/2017/07/23/activestorage-samples.html';
+      this.page.identifier = 'https://afreshcup.com/home/2017/07/23/activestorage-samples.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://a-fresh-cup.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

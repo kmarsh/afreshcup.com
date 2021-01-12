@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Notes on the Asset Pipeline</title>
+  <meta name="description" content="I&#39;ve come to the conclusion that it&#39;s time to understand what&#39;s going on with the Rails 3.2 asset pipeline - primarily because I&#39;m trying to upgrade a Rails ...">
+
+  <link rel="stylesheet" href="../../../../assets/main.css">
+  <link rel="canonical" href="notes-on-the-asset-pipeline.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../../../about.html">About</a>
+            <a class="page-link" href="../../../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">Notes on the Asset Pipeline</h1>
+    <p class="post-meta">
+      <time datetime="2012-04-08T00:00:00-05:00" itemprop="datePublished">
+        
+        Apr 8, 2012
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    <p>I've come to the conclusion that it's time to understand what's going on with the Rails 3.2 asset pipeline - primarily because I'm trying to upgrade a Rails 3.0 application and so far the process has been a complete disaster for me. So, I'm going back to first principles. Perhaps someone else will find these notes of use as well.</p>
+
+<p>I started out by building up a Rails 3.2.3 application from scratch:</p>
+
+<pre><code>
+cd scratch
+rvm use 1.9.3-p125
+rvm gemset create ap_test
+rvm gemset use ap_test
+gem install rails
+rails new ap_test
+cd ap_test/
+rails generate scaffold animal name:string legs:integer color:string
+rake db:migrate
+</code></pre>
+
+<p>Remove <code>public/index.html</code> and it's off to the races - a tiny working Rails application. Run the rails server, browse to localhost:3000, and it's there. Looking at the page source shows a bunch of assets:</p>
+
+<pre><code>
+&lt;link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="/assets/animals.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="/assets/scaffolds.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;script src="/assets/jquery.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/jquery_ujs.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/animals.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/application.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>This leads to a couple of immediate questions: where did these files come from and how did they get there? The css files come from files in <code>app/assets/stylesheets</code>:</p>
+
+<ul>
+	<li>animals.css.scss</li>
+	<li>application.css</li>
+	<li>scaffolds.css.scss</li>
+</ul>
+
+<p>The two <code>.scss</code> files were generated by the scaffold generator; <code>application.css</code> is the CSS manifest provided originally by Rails.</p>
+
+<p>For the JavaScript, things are more complicated. Two of the source files are in <code>app/assets/javascripts</code>:</p>
+
+<ul>
+	<li>animals.js.coffee</li>
+	<li>application.js</li>
+</ul>
+
+<p>The CoffeeScript file was generated by the scaffold generator, and the JavaScript manifest came from running the rails command. But what about the two jQuery files? They're definitely being served (I can retrieve http://localhost:3000/assets/jquery.js in the browser) but I have no idea where they're coming from. A little poking around shows that they are in the <code>jquery-rails</code> gem, where the files live in <code>vendor/assets/javascripts</code>. This gem is actually a Rails engine, and a look at <code>rails/railties/lib/rails/engine.rb</code> in the Rails source shows that the <code>vendor/assets</code>, <code>lib/assets</code> and <code>app/assets</code> directories inside an engine are added to <code>config.assets.paths</code> search path when the engine is initialized.</p>
+
+<p>Turning from file locations to process, this is what shows up on the first page access in the Rails log:</p>
+
+<pre><code>
+Started GET "/" for 127.0.0.1 at 2012-04-08 08:00:14 -0500
+Processing by AnimalsController#index as HTML
+  Animal Load (0.1ms)  SELECT "animals".* FROM "animals"
+  Rendered animals/index.html.erb within layouts/application (1.3ms)
+Compiled animals.css  (35ms)  (pid 91415)
+Compiled scaffolds.css  (34ms)  (pid 91415)
+Compiled application.css  (305ms)  (pid 91415)
+Compiled jquery.js  (4ms)  (pid 91415)
+Compiled jquery_ujs.js  (2ms)  (pid 91415)
+Compiled animals.js  (502ms)  (pid 91415)
+Compiled application.js  (670ms)  (pid 91415)
+Completed 200 OK in 1194ms (Views: 1189.7ms | ActiveRecord: 1.0ms)
+</code></pre>
+
+<p>So it's apparent that there was a transformation from the sources to the actual served version when I loaded the page. A little poking around shows that the compilation step only happens when necessary - loading new pages doesn't trigger it, but changing a file does. This is in development mode, of course.</p>
+
+<p>Time to look at configuration settings. These are scattered across several files. First, in <code>config/application.rb</code>:</p>
+
+<pre><code>
+# Enable the asset pipeline
+config.assets.enabled = true
+
+# Version of your assets, change this if you want to expire all your assets
+config.assets.version = '1.0'
+</code></pre>
+
+<p>And in <code>config/environments/development.rb</code>:</p>
+
+<pre><code>
+# Do not compress assets
+config.assets.compress = false
+
+# Expands the lines which load the assets
+config.assets.debug = true
+</code></pre>
+
+<p>For completeness, the corresponding section in <code>config/environments/production.rb</code>:</p>
+
+<pre><code>
+# Disable Rails's static asset server (Apache or nginx will already do this)
+config.serve_static_assets = false
+
+# Compress JavaScripts and CSS
+config.assets.compress = true
+
+# Don't fallback to assets pipeline if a precompiled asset is missed
+config.assets.compile = false
+
+# Generate digests for assets URLs
+config.assets.digest = true
+</code></pre>
+
+<p>So it looks like the default for <code>config.assets.compile</code> is <code>true</code>, which would explain why the server compiled things on demand when I ran the page. Finally, there is a section in the <code>Gemfile</code> that defines the asset pipeline itself:</p>
+
+<pre><code>
+# Gems used only for assets and not required
+# in production environments by default.
+group :assets do
+  gem 'sass-rails',   '~&gt; 3.2.3'
+  gem 'coffee-rails', '~&gt; 3.2.1'
+
+  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
+  # gem 'therubyracer', :platform =&gt; :ruby
+
+  gem 'uglifier', '&gt;= 1.0.3'
+end
+</code></pre>
+
+<p>So there's a gem that understands SASS/SCSS, one that understands CoffeeScript, and one that I suspect is concerned with compression.</p>
+
+<p>As to what actually does the serving - that's the sprockets gem. There's a comment in the sprockets README file: "Under Rails 3.1 and later, your Sprockets environment is automatically mounted at /assets." Xavier Noria kindly added a comment to this post with some details on how this mounting is managed. In development, then, assets are handled something like this:</p>
+
+<ol>
+	<li>Somehow Rails is calling sprockets to recompile any changed assets when a page request comes in. Sprockets is the source of the "Compiled animals.js  (502ms)  (pid 91415)" lines in the Rails log.</li>
+	<li>A request comes in for a file somewhere in /assets</li>
+	<li>This request gets routed to sprockets</li>
+	<li>Sprockets uses its asset paths array to find the first matching file and serves it</li>
+</ol>
+
+<p>The manifest files come into things as a shorthand way to tell Rails which assets to include with a particular request. The default layout only specifies one stylesheet and one javascript file:</p>
+
+<pre><code>
+&lt;%= stylesheet_link_tag    "application", :media =&gt; "all" %&gt;
+&lt;%= javascript_include_tag "application" %&gt;
+</code></pre>
+
+<p>Note that we no longer include the <code>:cache</code> settings on these declarations - that's now done within the asset pipeline bits.</p>
+
+<p>The two <code>application</code> files are no longer the default stylesheet and javascript files, but <em>manifests</em> that contain instructions to sprockets about what to include in the compiled files. You can still include css and javascript in these files, but I suspect that's a bad practice at this point; better to separate out the actual code to different files. Here's the default<code>application.css</code> file:</p>
+
+<pre><code>
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+*/
+</code></pre>
+
+<p>The lines starting with <code>*=</code> are directives to sprockets. These two say to include the current file, and to include every file in a tree starting in the current file's folder, i.e. the entire <code>app/stylesheets</code> hierarchy.
+
+</p>
+<p>Here's the default <code>application.js</code> file:</p>
+
+<pre><code>
+// This is a manifest file that'll be compiled into application.js, which will include all the files
+// listed below.
+//
+// Any JavaScript/Coffee file within this directory, lib/assets/javascripts, vendor/assets/javascripts,
+// or vendor/assets/javascripts of plugins, if any, can be referenced here using a relative path.
+//
+// It's not advisable to add code directly here, but if you do, it'll appear at the bottom of the
+// the compiled file.
+//
+// WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
+// GO AFTER THE REQUIRES BELOW.
+//
+//= require jquery
+//= require jquery_ujs
+//= require_tree .
+</code></pre>
+
+<p>This file is explicitly including the jQuery bits, which are found in the jquery-rails gem because it added itself to the asset search paths when it was loaded as an engine. It then includes every file in a tree starting in the current file's folder, i.e. the entire <code>app/javascripts</code> hierarchy.</p>
+
+<p>As we've seen, in development mode sprockets and the include tags include these files by bringing them in individually. In production mode things are a bit different. Just running the server in production mode and hitting the root will result in an error in the log:</p>
+
+<pre><code>
+Started GET "/" for 127.0.0.1 at 2012-04-08 09:45:05 -0500
+Processing by AnimalsController#index as HTML
+  Rendered animals/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 77ms
+
+ActionView::Template::Error (application.css isn't precompiled):
+</code></pre>
+
+<p>That's because of the <code>config.assets.compile = false</code> setting in <code>production.rb</code>. In production mode, Rails won't call sprockets to compile assets on the fly. Instead, you need to set them up manually by running <code>rake assets:precompile</code> first. This task puts copies of the compiled assets in <code>public/assets</code>. In production mode, the page source changes as well:</p>
+
+<pre><code>
+&lt;link href="/assets/application-958f49f3752dcbeab5370a3aee0bec08.css" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;script src="/assets/application-130530c48b043db45fa6a7a03b179580.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Note that sprockets has concatenated all the applicable files together and gone to cache-buster style naming. If you want to test this out using WEBrick, you'll need to set <code>config.serve_static_assets = true</code> in <code>production.rb</code>, otherwise Rails won't try to serve files out of <code>public/assets</code></p>.
+
+<p>What about controller-specific assets? Let's generate a second scaffolded resource:</p>
+
+<pre><code>
+rails generate scaffold bird name:string color:string
+rake db:migrate
+</code></pre>
+
+<p>This adds a bunch of files to the application, include <code>app/assets/javascripts/bird.js.coffee</code> and <code>app/assets/stylesheets/birds.css.scss</code>. Loading a page now loads <em>both</em> sets of assets:</p>
+
+<pre><code>
+&lt;link href="/assets/application.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="/assets/animals.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="/assets/birds.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;link href="/assets/scaffolds.css?body=1" media="all" rel="stylesheet" type="text/css" /&gt;
+&lt;script src="/assets/jquery.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/jquery_ujs.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/animals.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/birds.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+&lt;script src="/assets/application.js?body=1" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>And precompiling only produces one set of application-level js and css files as well. This makes sense based on what we've seen in the manifest files, but it contradicts what you might guess from the comments in the controller-specific files. It turns out that by default the organization of JavaScript and CSS into controller-specific files is strictly to help you keep track of things; all of the code in all of these files is available on every page. To actually load things on a controller-by-controller basis, you'd need to modify the manifest files and the layouts. I've placed an example of how to do this on a separate gist: <a href="https://gist.github.com/2338096">https://gist.github.com/2338096</a>.</p>
+
+<p>After working through the process to this point, I think I have a better idea what's going on. I still need to figure out a few things, chiefly: What's the deal with rake assets:precompile:primary and digested assets?</p>
+
+
+<p>Hopefully this helped sort things out for other people as well. Additions and corrections are more than welcome.</p>
+
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://afreshcup.com/home/2012/04/08/notes-on-the-asset-pipeline.html';
+      this.page.identifier = 'https://afreshcup.com/home/2012/04/08/notes-on-the-asset-pipeline.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://a-fresh-cup.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

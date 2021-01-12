@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RailsConf Day 3 Report</title>
+  <meta name="description" content="The day started out with the world premiere of the last of the Rails vs. PHP videos from the RailsEnvy guys. This was warmly received, as you might expect.Fr...">
+
+  <link rel="stylesheet" href="../../../../assets/main.css">
+  <link rel="canonical" href="railsconf-day-3-report.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../../../about.html">About</a>
+            <a class="page-link" href="../../../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">RailsConf Day 3 Report</h1>
+    <p class="post-meta">
+      <time datetime="2007-05-22T00:00:00-05:00" itemprop="datePublished">
+        
+        May 22, 2007
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    The day started out with the world premiere of the last of the <a href="http://www.railsenvy.com/2007/5/21/hi-i-m-ruby-on-rails-part-4">Rails vs. <span class="caps">PHP</span></a> videos from the RailsEnvy guys. This was warmly received, as you might expect.<br><br>From there, we rolled right into Jamis Buck and Michael Koziarski from the Rails core team discussing <a href="http://therailsway.com/">The Rails Way</a> . This was one of the best-loved keynotes of the whole conference, because they threw a bunch of code up on the screen; people were definitely hungry for more code in the presentations (a piece of feedback which I am sure the conference organizers have heard by now). A few of the points they raised:<br><ul>
+<br>	<li>A model does not need to equate to an actual database table</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>
+<span class="caps">DRY</span> is useful "but if the fix is worse than the original disease, don't do it!"</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>After you declare associations in your models, you should actually use them</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Take advantage of the helper methods in ActiveSupport to make your code's intent clear</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Don't cargo cult.</li>
+<br>
+</ul>
+<br>They held a Q&amp;A session at the end of the keynote via <span class="caps">IRC</span>. This was only moderately successful; as with the other conference <span class="caps">IRC</span> channels, there was a lot of pointless chatter going on. (I dipped into the main <span class="caps">IRC</span> channel a few times, and found it pretty much impossible to extract any value from it).<br><br>For my first session of the day, I elected to watch Britt Selvitelle and Alex Payne talk about "Scaling Twitter". This opened with Alex explaining the now-infamous interview; he maintains that he did not say that scaling on Rails is hard. Twitter was just a tiny project until SxSW and the follow-up media interest, at which point it took off.<br><br>Scaling has so far consisted mainly of throwing more boxes at the thing; they still just use a single database (with master-slave replication to a separate reporting database). Currently, Twitter is spread across 32 cores: 19 cores for Mongrel (120ish Mongrel instances), message processing and delivery across 16 cores, jabber across 2 cores, and MySQL on one big 8 core box. They're using 16GB or so for memcache.<br><br>Other Twitter statistics:<br><ul>
+<br>	<li>200-300 connections per second</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Spiking 800 connections per second</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Has been as high as 11,000 connections per second</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>MySQL has spiked to 2400 queries per second</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>
+<span class="caps">API</span> traffic is 20x web traffic, so Alexa underestimates by at least this factor</li>
+<br>
+</ul>
+<br>Caching is their biggest optimization. Memcache is their friend, and they do a bunch of event-driven cache invalidation (if Bob is a friend of Alice and Bob twitters, then Alice's friends timeline is invalid). They also denormalize the database as necessary. Another big help is Starling, a pure Ruby distributed queuing system that they wrote (and will probably open-source in the future).<br><br>Contrary to some reports on the Web, they've looked at ETags and it wouldn't be a huge optimization for them - they've actually had valid ETags in the past. <span class="caps">HTTP</span> delivery is not their big issue.<br><br>Another big help in scaling: the Rails community. "Act like it's a business plan. Get a board of advisors for your scaling plan, is our advice."<br><br>From there, I wandered over to hear Amy Hoy's talk "Rubber, Meet Road" about how developers and designers can work together. This was fun because Amy is an entertaining speaker, though I'm not sure how much I got out of it - I don't so much understand this fear that many developers seem to have of designers. A lot of the talk boiled down to reminding everyone that both fields are perfectly valid, and things will move along much better if we all collaborate instead of fighting. But people seemed to get a lot out of it, which was cool.<br><br>Amy did tie Rails back into the talk by looking at how you can get designers (with an <span class="caps">HTML</span>/CSS background) involved in actually working with Rails applications. As such things go, Rails is fairly friendly (though "all templating languages make things worse"). Developers can help by making it friendlier:<br><ul>
+<br>	<li>Write the Ruby code for the designers</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Create cheat sheets explaining the key uses of ActiveRecord and ERb in your own project</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Write helper methods to hide the much</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>Lots of comments</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>And don't forget to teach them about Subversion</li>
+<br>
+</ul>
+<br>I found another table full of random folks to have lunch with (I tried to mix as much as possible during meals; networking is a large part of why I paid for this conference), and we had a wide-ranging discussion of everything from how to retread from Access to Rails, to search plugins, to open source. One of the topics that came up was what Microsoft is doing with Ruby on the <span class="caps">DLR</span>. Now, <a href="http://www.hanselman.com/blog/IsMicrosoftLosingTheAlphaGeeks.aspx">Scott Hanselman</a> may have found interest in Microsoft spinning off the <span class="caps">DLR</span> code and developers to a separate non-profit organization, but all I can say is that he was talking to a different set of conference attendees than I was (I suspect Scott spent more time with the ThoughtWorkers and other enterprisey folks). I raised the question of the <span class="caps">DLR</span> in half a dozen groups, and the opinion was pretty well unanimous: no one trusted Microsoft in the least to keep their Ruby implementation pure, no one thought that it would be a safe component to depend on, and no one would even consider using it in a future application. The spectre of "embrace and extend (and extinguish)" still lives on.<br><br>I skipped one session and hung out and caught up on e-mail for a bit, and then caught the closing keynote with Dave Thomas. Dave started out with a satirical screenshot of rubymiddleagedwhiteguys.com (there had been some trouble with rubychicks.com during the conference) and went on to make the pitch that "I would like Rails to set the standard for the integration of people into the community." I don't have the energy for a long analysis of this stuff right now, but it's good to see that the Rails community is at least at the point where community leaders are recognizing that diversity and openness are useful core values, although there are some community dynamics that are still keeping the Rails community overwhelmingly white, male, young, and closed.<br><br>The next topic was the charitable donations drive that was spearheaded by the Pragmatic Programmers. As of the start of the keynote, about $26,000 had come in - which wasn't really an astounding amount for 1600 people, but not bad for 1600 people many of whom, I suspect, had never donated to anything. Dave suggested to other organizers that they keep the beg-a-thon up at future conferences: "Why don't we make this the standard for all technical conferences to show that the industry cares?"<br><br>The meat of the keynote started off with a discussion of the exponential growth of Rails and the number of Rails developers. Dave argues that we need to start putting in place mechanisms to allow people to learn better and to have conversations: better documentations, more blogs, help sites, who knows what else. The key question is how are we going to help new people join us?<br><br>Also, as the effort involved in launching a web application drops, more and more web applications become possible, and more and more people can launch them. We need to welcome in people who are not hardcore programmers. But this also means we get a whole new pool of people to play with: designers, writers, people with cool new ideas whoever they may be. We need to try to be an inclusive crowd, not an insular and geeky crowd.<br><br>From here, Dave moved into a discussion of cargo cult programming. He made a pitch that we're all doing it right now - broadly defined as doing things just because we've seen them work before. "There is no difference between the browser and the 3270 except that the browser can display better porn" (both are basically half-duplex devices). He urged the crowd to think beyond their habitual ways of doing things and to experiment.<br><br>Next rant: object-oriented programming. It's called <strong>object-oriented</strong> not *class-oriented" but we spend all of our time modeling the world with hierarchies of classes. But the world is chaotic, there are almost no inheritance hierarchies in nature. He sees the way we're using objects and classes as another cargo cult.<br><br>The bottom line: Don't just receive knowledge. (Of course, this is what all prophets say when they tire of being prophets. It rarely works. It's hard to get out of the business of being a prophet).<br><br>Dave ended, as one would expect of a closing keynote, with a challenge: "Go away from here, have fun, and do some good."<br><br>The conference wrapped with a closing reception with food and more chitchat. I ended up in a discussion of the Rails community (I suspect our little group was not the only one on that topic). My bet is that this RailsConf will be the last time that the majority of the Rails community ever gets together in one place - by next year, there will be too many developers working in this space for a single conference to accommodate them. So I suspect we're inevitably going to see fragmentation, not the sort of inclusivity that Dave Thomas was hoping for. Time will tell, though.
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://afreshcup.com/home/2007/05/22/railsconf-day-3-report.html';
+      this.page.identifier = 'https://afreshcup.com/home/2007/05/22/railsconf-day-3-report.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://a-fresh-cup.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>RailsConf Day 1 Report</title>
+  <meta name="description" content="Today was the real start of RailsConf 2007, and of course it started with the keynotes. Program chair Chad Fowler was up first, warming everyone up by playin...">
+
+  <link rel="stylesheet" href="../../../../assets/main.css">
+  <link rel="canonical" href="railsconf-day-1-report.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../../../about.html">About</a>
+            <a class="page-link" href="../../../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">RailsConf Day 1 Report</h1>
+    <p class="post-meta">
+      <time datetime="2007-05-19T00:00:00-05:00" itemprop="datePublished">
+        
+        May 19, 2007
+      </time>
+      </p>
+  </header>
+
+  <div class="post-content" itemprop="articleBody">
+    Today was the real start of RailsConf 2007, and of course it started with the keynotes. Program chair Chad Fowler was up first, warming everyone up by playing to the crowd. He pointed out that the wider world perceived Rails folks as arrogant bastards. People actually loved this; it's how they <strong>want</strong> to be perceived, apparently.<br><br>Next came the main event: David Heinemeier Hansson talking about Rails 2.0. It looks like Rails 2.0 is going to be like current edge Rails, only more so - indeed, he remarked that 95% of what he was showing today was already in edge (and indeed, I'd already played with much of it, which gave me a warm feeling; I may not be as far behind the curve as I thought). Resource orientation is going to be the default way of building applications in 2.0; no surprise there. Action Web Service is being moved out of the default Rails install, though it will remain available as a plugin: "Rails is not Switzerland - Rails has an opinion."<br><br>He also listed nine other things to like about Rails 2.0:<br><br>1. Breakpoints are back (via integration of ruby-debugger). I need to dig into this; being able to drop into a fully interactive debugger [take that, VB] by putting a single line of code in the source would be of great use to new people trying to learn this increasingly complex framework.<br><br>2. <span class="caps">HTTP</span> Performance. Multiple JavaScript and <span class="caps">CSS</span> files can be automatically consolidated into gzipped master files and served from asset hosts, along with other assets like images, making best use of multiple connections.<br><br>3. Query cache. This is a <span class="caps">SQL</span> cache in the Rails layer. Results will return from cache if it doesn't see <span class="caps">INSERT</span>/UPDATE/DELETE activity since the previous identical <span class="caps">SELECT</span> statement. This clearly has some problems if you're distributing your application across multiple servers, so presumably you can turn it off somehow.<br><br>4. action.mimetype.renderer - A new convention for splitting up URLs so that now you have people/index.html.erb, people/index.rss.erb, people/index.atom.builder and so on.  The format and renderer are deducible from the <span class="caps">URL</span>.<br><br>5. config/initializers - Pull stuff out of config/environment.rb and put it in multiple files in config/initializers directory. So, it's a way to organize the complexity, but the complexity is still there.<br><br>6. Sexy migrations - A simpler syntax for migrations which is already in <a href="http://blog.codefront.net/2007/05/07/sexy-migrations-on-edge-rails/">edge</a><br><br>7. <span class="caps">HTTP</span> Authentication - Built in support for <span class="caps">HTTP</span> basic authentication with calls like authenticate_or_request_with_http_basic. This is good for APIs, not so good for user-oriented stuff.<br><br>8. The <span class="caps">MIT</span> assumption - Creating a new plugin with the generator now assumes the <span class="caps">MIT</span> license and generates one for you (because that's what <span class="caps">DHH</span> prefers)<br><br>9. Spring cleaning - A lot of the deprecated stuff in 1.2 is going to move to plugins.<br><br>After a break, I ended up in "Building Community Applications with Rails". This wasn't the session I'd been planning on, but the conference organizers hadn't made any attempt to put more popular sessions in larger rooms and some sessions were full past bursting. It seems like they could have used the data from "MyConfPlan"http://www.myconfplan.com/conferences/RailsConf2007 as a statistically valid sample for planning, although by midday MyConfPlan appeared to be permanently crashed anyway. This session was basically a "lessons learned" from Dan Benjamin, one of the the guys behind <a href="http://corkd.com/">cork'd</a>, and it was mostly pretty obvious advice without Rails-specific content.<br><br>The computer of choice at this conference is overwhelmingly the Mac Book Pro - 95%, maybe. Many people are struggling with an apparently cranky wifi network; you can tell the ones with <span class="caps">EVDO</span> service because we're just happily online.<br><br>In the next session slot I caught Scott Raymond's "Doing <span class="caps">REST</span> Right". He spent a lot of time talking about the underpinnings of <span class="caps">REST</span>, starting with Roy Fielding's work, which was clearly not what the crowd was there for. Data point: about 30% of the crowd had built some amount of a <span class="caps">REST</span> application in Rails. Scott covered a number of the common questions people have as they're moving into <span class="caps">REST</span> (what about transactions, concurrency, reliability), but again, it didn't tie back to Rails. Talking to a few people after the session I got the impression that folks would have rather had a session that drilled more specifically into the <span class="caps">REST</span> support in edge Rails. This seems to be a pretty hands-on crowd, as well as one that is skewed towards people on their first, or first few, Rails applications.<br><br>The lunch break was marked by the same box crap food as yesterday. It's a good thing I don't come to conferences for the food. They've got quantity more than covered, but quality is fairly dismal.<br><br>After lunch I sat in on Ben Scofield's "Building and Working with Static Sites in Ruby on Rails" session. The basic problem his company was dealing with was handling sites with a <strong>lot</strong> of static pages (hundreds). For just a few static pages, there's no problem: you can use the obvious approaches of an action and a view for each page, or actionless views (put a file in the views folder, and the default route will serve it up fine in the controller's layout).<br><br>For more complex sites, Ben moved through four solutions, which really amounted to four refinements of the solution that Viget developed as they moved from being a <span class="caps">PHP</span> shop to being a Rails shop. All depend on using a catch-all route similar to<br><pre><code><br>map.connect "static/*path", :controller =&gt; "pages", :action =&gt; "show"<br></code></pre>
+<br>And then putting the pieces back together in the show method<br><pre><code><br>def show<br>  page_path = params[:path].join("/")<br>  if file exists ...<br></code></pre>
+<br>They gradually ended up with a Page model, a Variables model, and a Redirects model (Page has_many Variables, has_many Redirects), with all of the information filled in from database tables and the page content stored in the database as well so that it can be set up in the site search with ferret or solr or whatever.<br><br>Their solution has been packed up for reuse as a plugin application at <a href="http://www.viget.com/railsconf/">http://www.viget.com/railsconf/</a> though he cautions that it's still alpha code.<br><br>For my last session of the day, I decided to sample one from the "products and services" track - CodeGear's Joe McGlynn speaking on "Ten Cool Things I Learned on the Path to Rails Enlightenment". He spent about twenty minutes talking about ways that we grow up in our careers as software engineers, and I fear this was pretty much a throwaway; if you've read any of the literature from Fred Brooks on forward, you've seen this sort of thing before. Then he moved into the expected pitch for the new CodeGear Rails <span class="caps">IDE</span>. He invited all conference attendees to <a href="http://www.codegear.com/article/36513">join the beta</a> though after I looked at the amount of info they wanted to collect, I lost interest (apparently no one from CodeGear attended Dan Benjamin's talk on making signups easy). The demo itself was pretty bad; when neither the product nor the speaker was compelling after ten minutes, I walked out, and I was far from the only one.<br><br>There wasn't anything I wanted to catch in the last afternoon slot, so I took off for a bit, caught up on the web, and had some dinner. Then I came back for the evening keynotes. Evening keynotes strike me as a bizarre sort of thing, but I'll play along.<br><br>First up was Steven Smith from FiveRuns with "Enterprise is not a Four Letter Word". He spent time putting out facts and figures to prove that people love us, the press love us, and the enterprise market is huge, and ended up with a Monty Python clip with bad sound. Though the Python and the ragging on <span class="caps">ASP</span>.NET got a rise out of the crowd, I didn't really find much content in this talk. Yeah, the enterprise market is huge and lots of people have download Rails, but what's the connection between those two dots? I've chatted with half a dozen folks from actual enterprise-level shops at the conference, and they're here because they're interested to see what Rails can do, but they're all pretty clear that it's not even close to moving into their critical systems yet.<br><br>Next up was Avi Bryant with "Future History: Ruby at 30 Years", which was probably the best talk of the day. He purported to be talking about a version of Ruby from 2025 that included a number of interesting features:<br><ul>
+<br>	<li>A fast <span class="caps">JIT</span>-compiled Ruby VM</li>
+<br>	<li>Multiple commercial Ruby vendors</li>
+<br>	<li>A best in class <span class="caps">IDE</span> written in Ruby</li>
+<br>	<li>Standard Library entirely in Ruby</li>
+<br>	<li>Major financial/Enterprise use</li>
+<br>	<li>Massively scalability</li>
+<br>
+</ul>
+<br>Then he dropped the other shoe: he wasn't talking about Ruby 2025, but about Smalltalk now, but "Ruby and Smalltalk are the same language" - similar syntax, similar concepts. If you buy into that premise, you can use the current state of Smalltalk to see the future of Ruby. For example, Smalltalk's current state disproves the notion that there's something about Ruby's feature set that makes it inherently slow. (Of course, Avi didn't mention that by the same analogy, in 30 years Ruby will be a marginalized language that most people don't take seriously, kept alive by a small core of dedicated and occasionally shrill practitioners).<br><br>This idea didn't go over all that well with the crowd, though things picked up a bit when Avi finished his slides early and moved into "presentation by committee," taking questions and suggestions from the audience. It was clear that most people in the hall didn't know much about Smalltalk, and most who did know didn't think this would be a good path for Ruby, but there was some good back-and-forth.<br><br>The evening was capped by Ze Frank, who did some of his <a href="http://www.zefrank.com/showcase/speaking/speaking.html">standard standup routines</a> . This had nothing to do with Ruby or Rails, but the audience pretty much didn't care. As for me, it was a "get off my lawn" moment; I could have gotten back to the hotel earlier and watched Leno if I'd wanted standup, which I didn't particularly.
+
+  </div>
+
+  
+    
+
+  <div id="disqus_thread"></div>
+  <script>
+    var disqus_config = function () {
+      this.page.url = 'https://afreshcup.com/home/2007/05/19/railsconf-day-1-report.html';
+      this.page.identifier = 'https://afreshcup.com/home/2007/05/19/railsconf-day-1-report.html';
+    };
+
+    (function() {
+      var d = document, s = d.createElement('script');
+
+      s.src = 'https://a-fresh-cup.disqus.com/embed.js';
+
+      s.setAttribute('data-timestamp', +new Date());
+      (d.head || d.body).appendChild(s);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+
+  
+</article>
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>

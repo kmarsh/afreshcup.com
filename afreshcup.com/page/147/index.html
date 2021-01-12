@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>A Fresh Cup - page 147</title>
+  <meta name="description" content="Out of business.">
+
+  <link rel="stylesheet" href="../../assets/main.css">
+  <link rel="canonical" href="index.html">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="../../atom.xml">
+  <link rel="alternate" type="application/atom+xml" title="ATOM" href="../../atom.xml" />
+  <link rel="alternate" title="JSON" type="application/json" href="../../json_feed.json" />
+
+  <link rel="apple-touch-icon" sizes="180x180" href="../../images/favicon/apple-touch-icon.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon/favicon-32x32.png%3Fv=9ByKGgW0ed">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon/favicon-16x16.png%3Fv=9ByKGgW0ed">
+  <link rel="manifest" href="../../images/favicon/manifest.json%3Fv=9ByKGgW0ed">
+  <link rel="mask-icon" href="../../images/favicon/safari-pinned-tab.svg%3Fv=9ByKGgW0ed" color="#5bbad5">
+  <link rel="shortcut icon" href="../../images/favicon/favicon.ico%3Fv=9ByKGgW0ed">
+  <meta name="msapplication-config" content="/images/favicon/browserconfig.xml?v=9ByKGgW0ed">
+  <meta name="theme-color" content="#ffffff">
+</head>
+
+
+  <body>
+
+    <header class="site-header" role="banner">
+
+  <div class="wrapper">
+    
+    
+    <a class="site-title" href="../../index.html">A Fresh Cup</a>
+
+    
+      <nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
+              <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
+              <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger">
+            <a class="page-link" href="https://topics.afreshcup.com">Topics</a>
+            <a class="page-link" href="../../about.html">About</a>
+            <a class="page-link" href="../../uses.html">Uses</a>
+        </div>
+
+      </nav>
+    
+  </div>
+</header>
+
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <style>
+  ul.pager { text-align: center; list-style: none; }
+  ul.pager li {display: inline;border: 1px solid black; padding: 10px; margin: 5px;}
+  button.comment-loader {    background-color: #008CBA;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;}
+  article {padding-bottom: 30px;}
+</style>
+
+<div class="home">
+
+  
+
+    <!--
+        Here is the main paginator logic called.
+        All calls to site.posts should be replaced by paginator.posts
+    -->
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/05/a-better-way-to-page.html">A Better Way to Page</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-05T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 5, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Well, for some values of "better." Rails has built-in pagination. This is convenient. It was also clear to me even on cursory inspection that it wasn't being terribly sophisticated about how it was doing things. That's OK - if you're presenting 100 rows in pages of 20, <em>who cares</em> how optimized the code is?<br><br>But sometimes you're presenting hundreds of thousands of rows, so it's nice to have a better solution, at the cost of a bit more work. Part of being a developer is knowing when it's smart to trade off more work against some other value (like saving those <span class="caps">CPU</span> cycles). Enter <a href="http://errtheblog.com/post/929">I Will Paginate</a> which showed up on Err The Blog this morning. Using nicked <span class="caps">PHP</span> code, it uses a more scalable technique that should work better in most situation.<br><br>Is this the end of the pagination debate? Nope. If you know exactly what your database backend is, you can probably do even better, provided you don't mind coupling the database implementation decision closely to your code (and giving up portability). Knowing whether that's a smart thing to do is another one of those reasons that developers get paid to actually think.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/04/over-my-head-but-i-hope-it-doesn8217t-stay-there.html">Over my Head But I Hope It Doesn’t Stay There</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-04T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 4, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Just released: version 1.2 of <a href="http://rails-engines.org/">Rails Engines</a> . Near as I can figure it out so far, engines are a way to share components among your projects, which seems like a good thing, only they appear to have been controversial in the past. Anyhow, bookmarked so I can come back to this when I reach a greater level of Rails understanding and can figure out whether this is a Good Thing or not.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/04/a-useful-trick.html">A Useful Trick</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-04T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 4, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Rails is still delighting me with nice little touches. Today's comes from Obie Fernandez, who shows in <a href="http://jroller.com/page/obie?entry=seo_optimization_of_urls_in"><span class="caps">SEO</span> Optimization of URLs in Rails with to_param</a> how dirt simple it can be to get search engine friendly URLs out of Rails applications. (via <a href="http://weblog.rubyonrails.com/2007/2/4/how-to-get-more-literal-urls-and-still-use-ids">Riding Rails</a>). I expect I'll be using this in the future.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/03/yummy-deployment-goodness.html">Yummy Deployment Goodness</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-03T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 3, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          OK, so very few people are going to learn about the release of <a href="http://weblog.jamisbuck.org/2007/2/3/capistrano-1-4-0">Capistrano 1.4.0</a> from me rather than from some other source. But I'm going to blog it anyhow, because I have ambitions to <em>some day</em> have this be as good a news source for my new community as <a href="http://www.larkware.com">Larkware</a> is for my old one, and I have to start somewhere.<br><br>Anyhow, if you're deploying Rails applications from one server to another, you need this. It can also do a lot more than that, and some day when I get through a stack of other stuff I will explore it properly. Meanwhile it's off to run <code>sudo gem install capistrano</code> on a couple of machines to get them to update.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/02/this-came-in-handy-tonight.html">This Came in Handy Tonight</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-02T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 2, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          I'm still moving along on the <a href="http://larkwrite.com">LarkWrite</a> code, and one of tonight's tasks was to move some hard-coded strings out of views and into an external configuration file. After all, if I'm going to make this code available to people, eventually they're going to want to set their own titles and copyright strings, at least. I'd thought about a single-record database table, but using <span class="caps">YAML</span> for this seemed like a more sensible idea. The answer (or at least what seems to be a reasonably plausible answer) turned up over at <a href="http://www.bigbold.com/snippets/posts/show/551">Code Snippets</a> - reading the entire <span class="caps">YAML</span> file in one fell swoop as part of environment.rb:<br><pre><code><br>APP_CONFIG = YAML::load(File.open("#{RAILS_ROOT}/config/appconfig.yml"))<br></code></pre>
+<br>While I'm cautious about "programming by search engine," this looks like pretty much the solution I was hunting for in the first place.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/02/just-8216cause-i-keep-needing-it.html">Just ‘Cause I Keep Needing It</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-02T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 2, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <a href="http://www.ruby-doc.org/"><span class="caps">RUBY</span>-DOC.ORG</a> is loaded with online searchable Ruby documentation. This is very useful when you're using a Web framework based on a language that you don't really know yet.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/02/get-rails-cooking-on-the-mac.html">Get Rails Cooking on the Mac</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-02T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 2, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Dan Benjamin has an updated article on how to do it - <a href="http://hivelogic.com/narrative/articles/ruby-rails-mongrel-mysql-osx">Building Ruby, Rails, Mongrel, and MySQL on Mac <span class="caps">OS X</span></a> . This will give you all the necessary bits from source, which is how I prefer to work, so I recommend it to you as well. A detailed recipe that can save you much pain.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/02/01/to-conference-or-not-to-conference.html">To Conference or Not to Conference?</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-02-01T00:00:00-06:00" itemprop="datePublished">
+              
+              Feb 1, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Now that I'm moving into a new universe of development, I need to start thinking seriously about the conference circuit again. <a href="http://conferences.oreillynet.com/rails/">RailsConf</a> is coming up in May in the relatively-close venue of Portland, and Amy Hoy has a <a href="http://www.slash7.com/articles/2007/2/1/regional-ruby-conferences-roundup">roundup</a> of some smaller Ruby conferences on her weblog today.<br><br>Certainly conferences were an important part of my personal branding strategy when I got started in coding for the Microsoft platform - but that was <em>speaking</em> at conferences, not just <em>attending</em> them. I do not think I'll be in a position to pitch myself as a speaker until very late this year, or early next. So I need to think hard about the costs of attendance. Even RailsConf would cost a couple of grand to get to, between the $800 registration, travel and hotel, and 4-5 days that I can't bill at my current rate. That's a fairly significant hit. Balance against that some incremental amount of networking and learning - incremental in that I can otherwise do some pretty decent networking and learning over the Internet.<br><br>Right now I'm inclined to think that conference attendance falls into the "luxury" category for me, and that I'd be better served by putting the time into polishing my coding skills.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/31/ask-and-ye-shall-receive.html">Ask and Ye Shall Receive</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-31T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 31, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          A few days ago I speculated that it might be time to open a support group or mailing list for developers trying to rise up and throw off the chains of Microsoft. Fortunately for me, the lazyweb has come to my rescue here. The guys over at <strong>Softies on Rails</strong> just <a href="http://www.softiesonrails.com/2007/1/31/introducing-the-softies-on-rails-forum">announced</a> the opening of a new <a href="http://forum.softiesonrails.com/">forum</a> for people making the journey. See you there!
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/31/another-layer-on-top-of-rails.html">Another Layer on Top of Rails</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-31T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 31, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <a href="http://streamlined.relevancellc.com/pages/about">Streamlined</a> "is a framework, on top of Rails, that allows you to quickly generate interfaces for your ActiveRecord models. It started as a way to generate Administrative backends, but has become more general purpose over time." Looks way classier than scaffolding, but it's also having a bit of code ferment right now as it switches from being a generator to being a plugin. Another one to dig in when I get the chance. (via <a href="http://codehappy.wordpress.com/2007/01/31/streamlined-gets-a-new-release-and-new-plans/">CodeHappy</a>)
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/31/amazon-s3-in-ruby.html">Amazon S3 in Ruby</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-31T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 31, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Mike Clark has another interesting post today, <a href="http://www.clarkware.com/cgi/blosxom/2007/02/01#RubyS3Library">Getting Started with the Amazon S3 Library for Ruby</a> , exploring yet another spiffy Ruby library. I continue to be impressed with some of the things that people have wrapped up in small amounts of Ruby code - and happy that I don't have to cart them all around with me in some super-giant-mega framework when I don't need them.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/30/setting-up-eclipse-for-rails.html">Setting up Eclipse for Rails</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-30T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 30, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          There's a good-looking set of instructions over at <a href="http://yehudakatz.com/2007/01/27/my-preferred-rails-development-environment/">My Preferred Rails Development Environment</a> (via <a href="http://www.dzone.com/rsslinks/my_preferred_rails_development_environment.html">dzone</a>). In it, Yehuda Katz walks through the basic install steps for Eclipse, and then configures it with a set of plugins to speed Rails development.<br><br>I'm not going down this road myself at the moment, though. When learning a new language, I prefer to stick fairly close to the bare code and do a fair amount of typing (and even, dare I say it, some cut and paste) as I get the syntax locked into my brain. So right now I'm still mainly working in <a href="http://macromates.com/">TextMate</a> . Mileage varies, though, so if you're a hardcore <span class="caps">IDE</span> person it's nice to see how easy it is to set up a powerful free one for this stuff.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/30/a-layer-on-top-of-rails.html">A Layer on Top of Rails</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-30T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 30, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Interesting - <a href="http://hobocentral.net/blog/2007/01/25/what-is-hobo-2/#more-30">What is Hobo?</a> describes Hobo, which bills itself as "the Web App Builder for Rails." Basically, it's a set of plugins to add even more <span class="caps">DRY</span> and <span class="caps">RAD</span> features to the Rails framework. I think I need to spend some more time digging into plain vanilla Rails first (if there is such a thing), but this looks like it's a rather mature project and worth some exploration in the future.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/30/a-couple-of-mac-tools.html">A Couple of Mac Tools</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-30T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 30, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          <ul>
+<br>	<li>
+<a href="http://www.advenio.com/sqlgrinder/index.html">SQLGrinder</a> is another <span class="caps">DBA</span> tool, this one using <span class="caps">JDBC</span> for connectivity. $59 to register. My initial attempts at using it to connect to a MySQL database on a different machine weren't successful, but then, so far everything I've tried to connect to a MySQL database on a different machine have been unsuccessful.</li>
+<br>
+</ul>
+<br><ul>
+<br>	<li>
+<a href="http://www.bleepsoft.com/buildfactory/">BuildFactory</a> is a continuous integration tool that runs on the Mac, integrated with Subversion and various editors. $35 to register. I don't need this yet, but might come in handy in the future.</li>
+<br>
+</ul>
+
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/29/pointless-but-cute.html">Pointless but Cute</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-29T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 29, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Yeah, so the world doesn't really need <a href="http://iconfactory.com/software/twitterrific">Twitterific</a> , but then, there are many other mildly fun addictions it doesn't need either.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/29/making-the-switch.html">Making the Switch</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-29T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 29, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          James Higgs has been on the PC-to-Mac trail longer than I have. His <a href="http://staff.interesource.com/james/jan07/osxapps.htm">Mac <span class="caps">OS X</span> applications I use</a> post has plenty of links that I'll be checking out (though, thankfully, I think I'll be able to avoid putting MS Office on my Mac).
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/28/tracking-traffic.html">Tracking Traffic</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-28T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 28, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          I admit it, I watch traffic to my various Web sites. Terrible character failing, I know. Anyhow, at the moment <a href="../../index.html">A Fresh Cup</a> is on track to get somewhat less traffic in a month than <a href="http://www.larkware.com">Larkware</a> gets in a single day. So I guess I've got a ways to go. By the end of the year I'd like to see this site built up to the point where it's got the sort of authority that that one does, only in a new field. Of course, there are some barriers to that: right now, I don't know much, and not many people know that I'm over here. But I'm learning fast (I hope) and word is slowly spreading. Stay tuned, and feel free to tell your friends to come and visit.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/28/ruby-cheat-sheets.html">Ruby Cheat Sheets</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-28T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 28, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          Another cool resource: <a href="http://cheat.errtheblog.com/b">cheat sheets</a> features close to 100 command-line cheat sheets for Ruby and associated coding - the one on Capistrano helped me out immensely tonight, and I've got my eye on a couple of others (TextMate for Rails, for example). You can access them all online in <span class="caps">HTML</span> glory, or<br><pre><br><code><br> $ gem install cheat<br></code></pre>
+<br>will bring it into your local system where you can access the cheat sheets directly from the command line.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/28/another-application.html">Another Application</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-28T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 28, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          I've still been putting my personal 20% time to reasonably good use. Tonight I deployed <a href="http://larkwrite.com">LarkWrite</a> - a new home for my personal journal, with software custom-written in Rails. I kept an online journal for five years or so and then got too busy and got out of the habit, but it's time to get back into it again. The application is just barely functional enough to use right now - it lets me enter and markup and display stuff, and has a few different display modes, and probably has some bugs as well. But I'm reasonably pleased at how it's coming along, and considering that it's still under 200 lines of code I'm happy with the implementation as well.<br><br>I'll be tweaking on this one and adding features for a bit. When I think it's in a more ready state I'll make the source available as well. Then it's on to the next application.
+
+        </div>
+
+      </article>
+    
+      <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+        <header class="post-header">
+          <h1 class="post-title" itemprop="name headline" >
+            <a class="post-link" href="../../home/2007/01/27/more-rails-documentation.html">More Rails Documentation</a>
+          </h1>
+          <p class="post-meta">
+            <time datetime="2007-01-27T00:00:00-06:00" itemprop="datePublished">
+              
+              Jan 27, 2007
+            </time>
+            </p>
+        </header>
+
+        <div class="post-content" itemprop="articleBody">
+          There doesn't seem to be any lack of Rails documentation online. The <a href="http://railsmanual.org/">Ruby on Rails Manual</a> site has every version from 1.0.0 to 1.2.1 online, together with reader comments, an <a href="http://railsmanual.org/notes/rss"><span class="caps">RSS</span> feed</a> of the latest comments, and a <a href="http://mycroft.mozdev.org/download.html?name=railsmanual.org&amp;sherlock=yes&amp;opensearch=&amp;submitform=Search">Firefox search plugin</a> available.
+
+        </div>
+
+      </article>
+    
+
+  <!--
+    Showing buttons to move to the next and to the previous list of posts (pager buttons).
+  -->
+  
+  <ul class="pager">
+      
+      <li class="previous">
+          <a href="../146/index.html">&larr; Newer Posts</a>
+      </li>
+      
+      
+      <li class="next">
+          <a href="../148/index.html">Older Posts &rarr;</a>
+      </li>
+      
+  </ul>
+  
+
+  <p class="rss-subscribe">subscribe <a href="../../feed.xml">via RSS</a></p>
+
+</div>
+
+
+
+      </div>
+    </main>
+
+    <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">A Fresh Cup</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li>
+            
+              none
+            
+            </li>
+            
+            <li><a href="mailto:blank@example.com">blank@example.com</a></li>
+            
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-2">
+        <ul class="social-media-list">
+          
+          <li>
+            <a href="https://github.com/nil"><span class="icon icon--github"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+
+          
+          <li>
+            <a href="https://twitter.com/nil"><span class="icon icon--twitter"><svg viewBox="0 0 16 16" width="16px" height="16px"><path fill="#828282" d="M15.969,3.058c-0.586,0.26-1.217,0.436-1.878,0.515c0.675-0.405,1.194-1.045,1.438-1.809c-0.632,0.375-1.332,0.647-2.076,0.793c-0.596-0.636-1.446-1.033-2.387-1.033c-1.806,0-3.27,1.464-3.27,3.27 c0,0.256,0.029,0.506,0.085,0.745C5.163,5.404,2.753,4.102,1.14,2.124C0.859,2.607,0.698,3.168,0.698,3.767 c0,1.134,0.577,2.135,1.455,2.722C1.616,6.472,1.112,6.325,0.671,6.08c0,0.014,0,0.027,0,0.041c0,1.584,1.127,2.906,2.623,3.206 C3.02,9.402,2.731,9.442,2.433,9.442c-0.211,0-0.416-0.021-0.615-0.059c0.416,1.299,1.624,2.245,3.055,2.271 c-1.119,0.877-2.529,1.4-4.061,1.4c-0.264,0-0.524-0.015-0.78-0.046c1.447,0.928,3.166,1.469,5.013,1.469 c6.015,0,9.304-4.983,9.304-9.304c0-0.142-0.003-0.283-0.009-0.423C14.976,4.29,15.531,3.714,15.969,3.058z"/></svg>
+</span><span class="username">nil</span></a>
+
+          </li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col footer-col-3">
+        <p>Out of business.
+</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+
+
+  </body>
+
+</html>
