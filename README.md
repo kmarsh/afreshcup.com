@@ -6,4 +6,4 @@ I am not affiliated and this is not endorsed, etc. I was just a huge fan and wan
 
 Scraped with wget on November 16th, 2020 via:
 
-  wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://afreshcup.com
+    wget --mirror --convert-links --adjust-extension --page-requisites --no-parent https://afreshcup.com
